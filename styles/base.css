@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura&family=Noto+Color+Emoji&family=Noto+Serif&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    display: grid;
+    grid-template: auto auto 1fr auto / auto 1fr auto;
+}
+
+header,
+nav,
+footer {
+    grid-column: 1/4;
+    color: white;
+}
+
+h1,
+h2,
+h3,
+nav a {
+    font-family: 'Jura', sans-serif;
+}
+
+header,
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header,
+footer {
+    background-color: #1d4d72;
+}
+
+header {
+    grid-row: 1/2;
+    padding: 1rem;
+}
+
+header img {
+    width: calc(650px / 7);
+    border-radius: .5rem;
+}
+
+header h1 {
+    margin-left: 2rem;
+    font-size: 2.25rem;
+}
+
+nav {
+    grid-row: 2/3;
+    background-color: black;
+}
+
+nav a {
+    padding: 1rem 1.5rem;
+    font-size: 1.25rem;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+nav a:hover {
+    background-color: white;
+    color: black;
+}
+
+main {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 100px 1fr 100px;
+}
+
+main h2,
+.card {
+    margin: 1rem auto;
+}
+
+h2 {
+    grid-column: 1/4;
+    width: 100%;
+    padding: 2rem;
+    border-bottom: 1px solid;
+    text-align: center;
+}
+
+.card {
+    grid-column: 2/3;
+    width: 500px;
+    border: 1px solid #1d4d72;
+}
+
+.card h3 {
+    padding: 1rem;
+    text-align: center;
+    font-weight: bold;
+    background-color: #1d4d72;
+    color: white;
+}
+
+.card ul {
+    padding: 1rem;
+}
+
+.card p {
+    margin: 1rem auto;
+    text-align: center;
+}
+
+li {
+    list-style-type: none;
+    padding: .5rem 0;
+    font-family: 'Noto Serif', serif;
+
+    a {
+        color: #0022ff;
+    }
+}
+
+footer {
+    grid-row: 4/5;
+    padding: 1rem
+}
+
+footer p {
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Noto Serif', serif;
+}
+
+footer p:nth-child(1) {
+    margin-bottom: .75rem;
+}
+
+footer p span:nth-child(2) {
+    font-family: 'Noto Color Emoji', sans-serif;
+    font-size: 1.125rem;
+}
+
+@media screen and (width < 630px) {
+    body {
+        font-size: 30px;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        width: 100%;
+        font-size: 2rem;
+    }
+
+    main {
+        grid-template-columns: auto 1fr auto;
+    }
+
+    .card {
+        width: 80%;
+    }
+}
