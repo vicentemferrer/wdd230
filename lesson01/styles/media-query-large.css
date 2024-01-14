@@ -1,0 +1,10 @@
+@media screen and (500px < width) {
+    header {
+        color: white;
+        background-color: black;
+    }
+
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
