@@ -1,0 +1,26 @@
+@media screen and (650px < width) {
+    nav {
+        flex-direction: row;
+    }
+
+    nav a {
+        width: fit-content;
+    }
+
+    main {
+        width: 100%;
+        grid-template-columns: 100px 2fr 1fr 100px;
+    }
+
+    h2 {
+        grid-column: 2 / 4;
+    }
+
+    .card:nth-of-type(1) {
+        grid-column: 2 / 3;
+    }
+
+    .card:nth-of-type(2) {
+        grid-column: 3 / 4;
+    }
+}
