@@ -1,0 +1,17 @@
+@media screen and (1024px <width) {
+    body {
+        font-size: 16px;
+    }
+
+    main {
+        grid-template-columns: auto 1fr 1fr 1fr auto;
+    }
+
+    .card:first-of-type {
+        grid-column: 2 / span 1;
+    }
+
+    .card:not(.card:first-of-type) {
+        grid-column: span 1 !important;
+    }
+}

@@ -1,0 +1,32 @@
+@media screen and (500px <=width) {
+    body {
+        font-size: 18px;
+    }
+
+    main {
+        grid-template-columns: auto 1fr 1fr auto;
+    }
+
+    .card:first-of-type,
+    .card:last-of-type {
+        grid-column-start: 2;
+    }
+
+    .card:nth-of-type(2) {
+        grid-column-start: 3;
+    }
+
+    .card:not(.card:last-of-type) {
+        grid-column-end: span 1;
+    }
+
+    .card:last-of-type {
+        grid-column-end: span 2;
+    }
+}
+
+@media screen and (768px <=width) {
+    body {
+        font-size: 20px;
+    }
+}
