@@ -1,9 +1,10 @@
 const root = document.querySelector(':root')
 const heading = document.querySelector('h1')
 const paragraph = document.querySelector('p')
+const headFont = document.querySelector('#head-font')
+const paraFont = document.querySelector('#para-font')
 const colorSchemaLink = document.querySelector('main > p + a')
 const colors = document.querySelectorAll('.colors td')
-const h4s = document.querySelectorAll('h4')
 
 const colorLink = colorSchemaLink.href
 colorSchemaLink.textContent = colorLink
@@ -55,15 +56,5 @@ for (let i = 0; i < colors.length; i++) {
   }
 }
 
-for (let i = 0; i < 2; i++) {
-  let font
-  if (h4s[i].textContent.toLowerCase().includes('heading')) {
-    font = getComputedStyle(heading)['fontFamily']
-  }
-
-  if (h4s[i].textContent.toLowerCase().includes('paragraph')) {
-    font = getComputedStyle(paragraph)['fontFamily']
-  }
-
-  h4s[i].textContent += ` ${font}`
-}
+headFont.textContent += ` ${getComputedStyle(heading)['fontFamily']}`
+paraFont.textContent += ` ${getComputedStyle(paragraph)['fontFamily']}`
