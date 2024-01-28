@@ -27,7 +27,7 @@
         grid-column: 2 / span 1;
     }
 
-    .card:has(iframe[data-type="map"]) {
+    .card:has(iframe[title="Ancud map"]) {
         grid-column: 2 / span 2;
     }
 
