@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Noto+Serif:ital,wght@0,400;1,600&display=swap');
-
 :root {
     /* Palette */
     --primary-color: #1d7fbe;
@@ -23,6 +21,8 @@
     --nav-background-color: #7ab5dc1f;
     --nav-hover-link-color: var(--accent2-color);
     --nav-hover-background-color: var(--secondary-color);
+
+    --fallback-proof: safe;
 }
 
 * {
@@ -227,7 +227,7 @@ main section {
     grid-column: 2 / 3;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: var(--fallback-proof, stretch);
     align-items: center;
     background-color: lightgray;
     border-radius: .25rem;

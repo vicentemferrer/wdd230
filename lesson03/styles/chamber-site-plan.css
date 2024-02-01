@@ -20,7 +20,7 @@
     --paragraph-background-color: var(--primary-color);
 
     --nav-link-color: white;
-    --nav-background-color: var(--primary-color);
+    --nav-background-color: #7ab5dc1f;
     --nav-hover-link-color: var(--accent2-color);
     --nav-hover-background-color: var(--secondary-color);
 }
