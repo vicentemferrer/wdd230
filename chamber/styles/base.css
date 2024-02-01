@@ -78,7 +78,7 @@ header {
     background-color: var(--nav-background-color);
 }
 
-#header-logo a {
+#header-logo {
     display: flex;
 }
 
