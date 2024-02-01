@@ -1,0 +1,13 @@
+@media screen and (1024px < width) {
+    nav {
+        width: 40%;
+    }
+
+    #hero,
+    #hero-img,
+    #hero-img img,
+    #bg,
+    #hero-content {
+        height: 75vh;
+    }
+}

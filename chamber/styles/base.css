@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Noto+Serif:ital,wght@0,400;1,600&display=swap');
+
+:root {
+    /* Palette */
+    --primary-color: #1d7fbe;
+    --secondary-color: #fefefe;
+    --accent1-color: #f9bf90;
+    --accent2-color: #0074c2;
+    --accent3-color: #c53b0d;
+
+    /* Fonts */
+    --heading-font: "Aboreto", sans-serif;
+    --paragraph-font: "Noto Serif", serif;
+
+    /* Text and elements colors */
+    --headline-color-on-white: var(--accent3-color);
+    --headline-color-on-color: var(--secondary-color);
+    --paragraph-color-on-white: black;
+    --paragraph-color-on-color: white;
+    --paragraph-background-color: var(--primary-color);
+
+    --nav-link-color: white;
+    --nav-background-color: #7ab5dc1f;
+    --nav-hover-link-color: var(--accent2-color);
+    --nav-hover-background-color: var(--secondary-color);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    font-family: var(--paragraph-font);
+    font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header a,
+.nav-links a {
+    font-family: var(--heading-font);
+}
+
+h1,
+header a,
+.nav-links a {
+    font-weight: bold;
+}
+
+header,
+footer {
+    grid-column: 1 / 4;
+}
+
+header a,
+.nav-links a,
+.nav-links.open a,
+footer {
+    text-decoration: none;
+    color: var(--nav-link-color);
+}
+
+header {
+    grid-row: 1 / 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    z-index: 1;
+    background-color: var(--nav-background-color);
+}
+
+#header-logo a {
+    display: flex;
+}
+
+#header-logo img {
+    width: calc(500px / 5);
+}
+
+#header-logo figcaption {
+    display: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#menu::before {
+    content: "☰";
+    font-size: 2rem;
+}
+
+#menu.open::before {
+    content: "×";
+    font-size: 3rem;
+}
+
+.nav-links {
+    display: none;
+}
+
+.nav-links.open {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    position: absolute;
+    top: 12vh;
+    left: 0;
+}
+
+.nav-links.open a {
+    width: 100%;
+    text-align: center;
+    padding: .5rem 0;
+}
+
+.nav-links a:hover {
+    color: var(--nav-hover-link-color);
+    background-color: var(--nav-hover-background-color);
+}
+
+.nav-links.open a:hover {
+    color: black;
+    background-color: var(--nav-hover-background-color);
+}
+
+main.open {
+    grid-row: 3 / 4;
+}
+
+main {
+    grid-column: 2 / 3;
+    grid-row: 1 / 4;
+
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    row-gap: 1rem;
+}
+
+#hero,
+#hero-img,
+#hero-img img,
+#bg,
+#hero-content {
+    height: 45vh;
+}
+
+#hero {
+    grid-column: 1 / 4;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+}
+
+#hero-img,
+#bg,
+#hero-content {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+#hero-img {
+    width: 100%;
+    z-index: -2;
+}
+
+#hero-img img {
+    width: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+#bg {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(-180deg, #000e, transparent);
+    z-index: -1;
+}
+
+#hero-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero-content>* {
+    text-align: center;
+}
+
+#hero-content h1 {
+    color: var(--headline-color-on-color);
+}
+
+#hero-content .join {
+    margin-top: 1rem;
+    color: var(--nav-link-color);
+    background-color: var(--accent3-color);
+    text-decoration: none;
+    padding: .5rem .75rem;
+    border-radius: .25rem;
+    border: 1px solid white;
+    box-shadow: .5px .5px 2px lightgray;
+}
+
+#hero-content .join:hover {
+    color: var(--accent3-color);
+    background-color: var(--nav-hover-background-color);
+    border-color: black;
+}
+
+main section {
+    grid-column: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+    border-radius: .25rem;
+    border: 1px solid black;
+}
+
+main section h2,
+main section article {
+    padding: .5rem;
+    width: 80%;
+}
+
+main section h2 {
+    text-align: center;
+    padding-bottom: .35rem;
+    border-bottom: 1px solid black;
+}
+
+.spotlights {
+    gap: .5rem;
+    padding-bottom: .5rem;
+    margin-bottom: 1rem;
+}
+
+.spotlights article {
+    background-color: rgb(255, 254, 254);
+    border-radius: .25rem;
+    border: 1px solid black;
+}
+
+footer {
+    grid-row: 4 / 5;
+    background-color: var(--accent2-color);
+}
+
+footer p {
+    margin: 1rem auto;
+    text-align: center;
+}
