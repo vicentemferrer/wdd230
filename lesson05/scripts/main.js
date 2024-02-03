@@ -6,7 +6,6 @@ const scriptureURL = 'https://www.churchofjesuschrist.org/study/scriptures/bofm/
 
 function restructureBook(book) {
   const resBook = book.map(fr => (fr !== 'Nephi' && fr !== 'of') ? fr.charAt(0) : fr.slice(0, 2))
-
   return resBook.join('-').toLowerCase()
 }
 
