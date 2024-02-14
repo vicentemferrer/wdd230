@@ -20,7 +20,8 @@ footer {
 h1,
 h2,
 h3,
-nav a {
+nav a,
+.hero p {
     font-family: 'Jura', sans-serif;
 }
 
@@ -118,7 +119,7 @@ main {
     height: auto;
 }
 
-.hero h2 {
+.hero p {
     width: 11ch;
     position: absolute;
     top: .5rem;
@@ -128,10 +129,12 @@ main {
     background-color: #1d4d726f;
     color: white;
     border-radius: 1rem;
+    text-align: center;
 }
 
 main h2,
-.card {
+.card,
+.hero p {
     margin: 0 auto;
 }
 
@@ -187,6 +190,7 @@ li {
 }
 
 iframe {
+    grid-column: 2 / 3;
     width: 100%;
     height: 100%;
 }

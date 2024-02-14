@@ -31,7 +31,7 @@
         grid-column: 2 / span 1;
     }
 
-    .card:has(iframe[title="Ancud map"]) {
+    iframe[title="Ancud map"] {
         grid-column: 2 / span 2;
     }
 
@@ -40,8 +40,8 @@
     }
 }
 
-@media screen and (1010px < width) {
-    .hero h2 {
+@media screen and (1100px < width) {
+    .hero p {
         font-size: 2.5rem;
         width: 15ch;
         top: 1rem;
