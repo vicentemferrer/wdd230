@@ -102,10 +102,32 @@ nav a:not(#menu):hover {
 main {
     grid-column: 2/3;
     grid-row: 3/4;
-    margin: 1rem auto;
+    margin: 0 auto 1rem;
     display: grid;
     grid-template-columns: auto 1fr auto;
-    gap: 1rem;
+    gap: 1rem
+}
+
+.hero {
+    grid-column: 1/4;
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.hero h2 {
+    width: 11ch;
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    border: 1px solid white;
+    padding: .5rem;
+    background-color: #1d4d726f;
+    color: white;
+    border-radius: 1rem;
 }
 
 main h2,
