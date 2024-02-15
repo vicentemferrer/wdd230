@@ -18,7 +18,7 @@
     --paragraph-background-color: var(--primary-color);
 
     --nav-link-color: white;
-    --nav-background-color: transparent;
+    --nav-background-color: black;
     --nav-hover-link-color: var(--accent2-color);
     --nav-hover-background-color: var(--secondary-color);
 
@@ -45,13 +45,13 @@ h4,
 h5,
 h6,
 header a,
-.nav-links a {
+#nav-links a {
     font-family: var(--heading-font);
 }
 
 h1,
 header a,
-.nav-links a {
+#nav-links a {
     font-weight: bold;
 }
 
@@ -61,8 +61,8 @@ footer {
 }
 
 header a,
-.nav-links a,
-.nav-links.open a,
+#nav-links a,
+#nav-links.open a,
 footer {
     text-decoration: none;
     color: var(--nav-link-color);
@@ -108,52 +108,43 @@ nav {
     font-size: 3rem;
 }
 
-.nav-links {
+#nav-links {
     display: none;
 }
 
-.nav-links.open {
+#nav-links.open {
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
     width: 100vw;
     display: flex;
     flex-direction: column;
     background-color: black;
-    position: absolute;
-    top: 6rem;
-    left: 0;
 }
 
-.nav-links.open a {
+#nav-links.open a {
     width: 100%;
     text-align: center;
     padding: .5rem 0;
 }
 
-.nav-links a:hover {
+#nav-links a:hover {
     color: var(--nav-hover-link-color);
     background-color: var(--nav-hover-background-color);
 }
 
-.nav-links.open a:hover {
+#nav-links.open a:hover {
     color: black;
     background-color: var(--nav-hover-background-color);
 }
 
 main {
     grid-column: 2 / 3;
-    grid-row: 1 / 4;
+    grid-row: 3 / 4;
 
     display: grid;
     grid-template-columns: auto 1fr auto;
     row-gap: 1rem;
-    z-index: -2;
-}
-
-#hero,
-#hero-img,
-#hero-img img,
-#bg,
-#hero-content {
-    height: 50vh;
+    z-index: 0;
 }
 
 #hero {
@@ -163,21 +154,22 @@ main {
     place-items: center;
 }
 
-#hero-img,
+#hero picture,
 #bg,
 #hero-content {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
 }
 
-#hero-img {
+#hero picture {
     width: 100%;
+    height: auto;
     z-index: -1;
 }
 
-#hero-img img {
+#hero img {
     width: 100%;
-    object-fit: cover;
+    height: auto;
 }
 
 #bg {
@@ -205,7 +197,6 @@ main {
 }
 
 #hero-content .join {
-    margin-top: 1rem;
     color: var(--nav-link-color);
     background-color: var(--accent3-color);
     text-decoration: none;

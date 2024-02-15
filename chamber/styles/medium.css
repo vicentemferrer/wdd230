@@ -1,4 +1,8 @@
 @media screen and (500px < width) {
+    :root {
+        --nav-background-color: transparent;
+    }
+
     nav {
         width: 80%;
     }
@@ -8,8 +12,8 @@
         display: none;
     }
 
-    .nav-links,
-    .nav-links.open {
+    #nav-links,
+    #nav-links.open {
         width: 100%;
         display: flex;
         flex-direction: row;
@@ -19,33 +23,22 @@
         gap: 1rem;
     }
 
-    .nav-links a,
-    .nav-links.open a {
+    #nav-links a,
+    #nav-links.open a {
         width: 100%;
         text-align: center;
         padding: .5rem 0;
     }
 
-    .nav-links a:hover {
+    #nav-links a:hover {
         color: var(--secondary-color);
         background-color: unset;
         text-decoration: underline;
         text-underline-offset: .2rem;
     }
 
-    #hero,
-    #hero-img,
-    #hero-img img,
-    #bg,
-    #hero-content {
-        height: unset;
-    }
-
-    #bg {
-        width: 100%;
-        height: 100%;
-        background-image: linear-gradient(-180deg, #000e, transparent);
-        z-index: -1;
+    main {
+        grid-row: 1 / 4;
     }
 }
 

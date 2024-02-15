@@ -179,14 +179,14 @@ h2 {
 li {
     padding: .5rem 0;
     font-family: 'Noto Serif', serif;
+}
 
-    & a {
-        color: #0022ff;
+li a {
+    color: #0022ff;
+}
 
-        &:hover {
-            color: brown;
-        }
-    }
+li a:hover {
+    color: brown;
 }
 
 iframe {

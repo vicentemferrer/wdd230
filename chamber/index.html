@@ -26,13 +26,13 @@
     <header>
         <a href="#">
             <figure id="header-logo">
-                <img src="images/logo.png" alt="Ancud township logo">
+                <img src="images/logo.webp" alt="Ancud township logo">
                 <figcaption>Chamber of Commerce</figcaption>
             </figure>
         </a>
         <nav>
             <a href="#" id="menu"></a>
-            <div class="nav-links">
+            <div id="nav-links">
                 <a href="#">Home</a>
                 <a href="#">Discover</a>
                 <a href="#">Directory</a>
@@ -43,9 +43,14 @@
     </header>
     <main>
         <div id="hero">
-            <div id="hero-img">
+            <!-- <div id="hero-img">
                 <img src="images/ancud.jpg" alt="Ancud houses photo">
-            </div>
+            </div> -->
+            <picture>
+                <source media="(min-width: 1024px)" srcset="images/hero-large.webp">
+                <source media="(min-width: 767px)" srcset="images/hero-medium.webp">
+                <img src="images/hero-small.webp" alt="people working">
+            </picture>
             <div id="bg"></div>
             <div id="hero-content">
                 <h1>The Heart of Our Town</h1>
@@ -59,7 +64,7 @@
                 <p>Join us for the grand opening of The Diamond Shack, Thursday at 1:00 p.m. </p>
             </article>
         </section>
-        <section>
+        <section id="weather">
             <h2>Weather</h2>
             <article>
                 <p>33°C Partly Cloudy Humidity: 35% Wind Chill: N/A </p>
@@ -87,6 +92,7 @@
         </p>
     </footer>
     <script src="scripts/main.js" type="module"></script>
+    <script src="scripts/windchill.js" type="module"></script>
 </body>
 
 </html>

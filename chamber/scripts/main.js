@@ -1,22 +1,30 @@
 const hamburgerMenu = document.getElementById('menu')
-const navigation = document.querySelector('.nav-links')
+const navElement = document.querySelector('nav')
+const navigation = document.getElementById('nav-links')
 const mode = document.querySelector('#mode')
 const main = document.querySelector('main')
 
-function toggleNavLinks() {
-  if (navigation.classList.contains('open') && window.innerWidth < 500) {
+function toggleNavLinks(navMode) {
+  if (navMode === 'close') {
+    navigation.classList.remove('open')
+    hamburgerMenu.classList.remove('open')
+  }
+
+  if (navMode === 'open' && window.innerWidth < 500) {
     document.body.appendChild(navigation)
   } else {
-    document.querySelector('nav').appendChild(navigation)
-    document.querySelector('nav').appendChild(mode)
+    navElement.appendChild(navigation)
+    navElement.appendChild(mode)
   }
 }
 
-window.addEventListener('resize', () => toggleNavLinks())
+window.addEventListener('resize', () => {
+  toggleNavLinks('close')
+})
 
 hamburgerMenu.addEventListener('click', () => {
+  toggleNavLinks('open')
   navigation.classList.toggle('open')
-  toggleNavLinks()
   hamburgerMenu.classList.toggle('open')
 })
 
