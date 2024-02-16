@@ -19,7 +19,7 @@
 
     --nav-link-color: white;
     --nav-background-color: black;
-    --nav-hover-link-color: var(--accent2-color);
+    --nav-hover-link-color: var(--accent3-color);
     --nav-hover-background-color: var(--secondary-color);
 
     --fallback-proof: safe;
@@ -185,15 +185,17 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    row-gap: .5rem;
 }
 
 #hero-content>* {
     text-align: center;
 }
 
-#hero-content h1 {
+#hero-content h2 {
     color: var(--headline-color-on-color);
     width: 15ch;
+    font-size: 3.5ch;
 }
 
 #hero-content .join {
@@ -249,12 +251,62 @@ main section h2 {
 
 footer {
     grid-row: 4 / 5;
-    background-color: var(--accent2-color);
+    background-color: black;
+    padding-bottom: 1rem;
+
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
 }
 
-footer p {
-    margin: 1rem auto;
-    text-align: center;
+.chamber,
+.info,
+.project {
+    grid-column: 2 / 3;
+}
+
+.chamber figure,
+.info address,
+.project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chamber figure {
+    flex-direction: row;
+}
+
+.chamber img {
+    width: calc(500px / 4);
+    object-fit: cover;
+}
+
+.chamber figcaption {
+    width: 20ch;
+    text-wrap: balance;
+}
+
+.info address {
+    font-style: normal;
+    flex-direction: column;
+    gap: .25rem
+}
+
+.info a {
+    color: white;
+    text-decoration: none;
+}
+
+.info a:hover {
+    color: var(--nav-hover-link-color);
+    text-decoration: underline;
+    text-underline-offset: .2rem;
+}
+
+.project {
+    margin-top: 1rem;
+    flex-direction: column;
 }
 
 /* Dark Mode */

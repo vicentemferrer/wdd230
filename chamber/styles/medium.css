@@ -40,14 +40,40 @@
     main {
         grid-row: 1 / 4;
     }
+
+    footer {
+        font-size: 1ch;
+        grid-template-columns: auto repeat(4, 1fr) auto;
+        gap: 1rem;
+    }
+
+    .chamber {
+        grid-column: 3 / 4;
+    }
+
+    .info {
+        grid-column: 4 / 5;
+    }
+
+    .project {
+        margin: 0;
+        grid-column: 1 / 7;
+        flex-direction: row;
+        column-gap: .125rem;
+    }
+
+    .project p:not(.project p:last-of-type)::after {
+        content: "|";
+        margin-left: .125rem;
+    }
 }
 
-@media screen and (767px < width) {
+@media screen and (768px < width) {
     #header-logo figcaption {
         display: block;
         align-self: center;
-        width: 11ch;
-        font-size: 1.25rem;
+        width: 25ch;
+        font-size: .70rem;
     }
 
     nav {
@@ -63,7 +89,7 @@
         grid-column: 1 / 6;
     }
 
-    #hero-content h1 {
+    #hero-content h2 {
         font-size: 5ch;
     }
 
@@ -102,5 +128,9 @@
 
     .spotlights h2 {
         display: none;
+    }
+
+    footer {
+        font-size: unset;
     }
 }
