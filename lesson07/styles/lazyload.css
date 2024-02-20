@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans';
+    font-size: 16px;
+    display: grid;
+    grid-template-columns: auto 400px auto;
+    background-color: #F2F5EA;
+}
+
+header,
+main,
+footer {
+    padding: 1rem 0;
+}
+
+header,
+footer {
+    grid-column: 1 / 4;
+    background-color: goldenrod;
+}
+
+h1 {
+    font-family: 'Protest Revolution';
+    font-size: 3rem;
+    text-align: center;
+}
+
+main,
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    grid-column: 2 / 3;
+    margin: 0 auto;
+    width: 400px;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+picture,
+img {
+    width: 100%;
+}
+
+img {
+    border-radius: .5rem;
+    object-fit: cover;
+    background-color: black;
+    animation: fade 15s;
+}
+
+footer {
+    flex-wrap: wrap;
+}
+
+footer p:first-of-type::after {
+    content: "|";
+    margin: 0 .25rem;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media screen and (500px < width) {
+    footer {
+        flex-direction: row;
+        column-gap: .25rem;
+    }
+
+    footer p:first-of-type::after {
+        margin: 0;
+    }
+
+    footer p:not(footer p:last-of-type)::after {
+        content: "|";
+        margin-left: .25rem;
+    }
+}
