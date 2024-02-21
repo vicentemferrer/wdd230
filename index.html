@@ -35,7 +35,7 @@
         <div class="hero">
             <picture>
                 <source media="(min-width: 650px)" srcset="images/hero-large.webp">
-                <img src="images/hero-small.webp" alt="Concepción Chile Temple">
+                <img src="images/hero-small.webp" alt="Concepción Chile Temple" width="500" height="375" loading="lazy">
             </picture>
             <p>Concepcion Chile Temple</p>
         </div>
@@ -73,11 +73,11 @@
             <h3>Information</h3>
             <p>Ancud, Chile</p>
             <p>19°C ☀</p>
-            <p>Page Visits: 10</p>
+            <p id="pageVisits"><strong>Page Visits:</strong> </p>
         </section>
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d148305.7127852142!2d-73.80078337279514!3d-41.895562501307545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2scl!4v1706212934728!5m2!1ses-419!2scl"
-            style="border:0;" title="Ancud map" allowfullscreen="" loading="async"
+            style="border:0;" title="Ancud map" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
     </main>
     <footer>
@@ -88,8 +88,9 @@
         </p>
         <p id="lastModified"></p>
     </footer>
-    <script src="scripts/getdates.js"></script>
-    <script src="scripts/navigation.js"></script>
+    <script src="scripts/getdates.js" type="module"></script>
+    <script src="scripts/navigation.js" type="module"></script>
+    <script src="scripts/information.js" type="module"></script>
 </body>
 
 </html>
