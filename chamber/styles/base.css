@@ -152,24 +152,12 @@ nav,
     grid-row: 3 / 4;
 
     display: grid;
-    grid-template: repeat(3, auto) / auto 1fr auto;
+    grid-template: repeat(6, auto) / auto 1fr auto;
     gap: 1rem;
 }
 
 aside section {
     grid-column: 2 / 3;
-}
-
-aside section:first-of-type {
-    grid-row: 1 / 2;
-}
-
-aside section:nth-of-type(2) {
-    grid-row: 2 / 3;
-}
-
-aside section:last-of-type {
-    grid-row: 3 / 4;
 }
 
 main {
@@ -331,7 +319,7 @@ section a:hover,
 }
 
 .discover main figure picture {
-    width: clamp(300px, 80%, 400px);
+    width: clamp(300px, 80%, 500px);
 }
 
 .discover main figure picture img {
