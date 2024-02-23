@@ -91,7 +91,8 @@ header {
     display: none;
 }
 
-nav {
+nav,
+.discover main {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -127,6 +128,10 @@ nav {
     padding: .5rem 0;
 }
 
+#nav-links a.active {
+    color: var(--accent1-color);
+}
+
 #nav-links a:hover {
     color: var(--nav-hover-link-color);
     background-color: var(--nav-hover-background-color);
@@ -137,14 +142,51 @@ nav {
     background-color: var(--nav-hover-background-color);
 }
 
+.discover aside,
+.discover main {
+    margin: 1rem 0;
+}
+
+.discover aside {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+
+    display: grid;
+    grid-template: repeat(3, auto) / auto 1fr auto;
+    gap: 1rem;
+}
+
+aside section {
+    grid-column: 2 / 3;
+}
+
+aside section:first-of-type {
+    grid-row: 1 / 2;
+}
+
+aside section:nth-of-type(2) {
+    grid-row: 2 / 3;
+}
+
+aside section:last-of-type {
+    grid-row: 3 / 4;
+}
+
 main {
     grid-column: 2 / 3;
     grid-row: 3 / 4;
 
     display: grid;
     grid-template-columns: auto 1fr auto;
-    row-gap: 1rem;
+    gap: 1rem;
     z-index: 0;
+}
+
+.discover main {
+    grid-row: 4 / 5;
+    width: 100%;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 #hero {
@@ -162,12 +204,12 @@ main {
 }
 
 #hero picture {
-    width: 100%;
-    height: auto;
     z-index: -1;
 }
 
-#hero img {
+#hero picture,
+#hero picture img,
+.discover main figure {
     width: 100%;
     height: auto;
 }
@@ -214,7 +256,7 @@ main {
     border-color: black;
 }
 
-main section {
+section:not(footer section) {
     grid-column: 2 / 3;
     display: flex;
     flex-direction: column;
@@ -225,21 +267,46 @@ main section {
     border: 1px solid black;
 }
 
-main section h2,
-main section article {
+section h2,
+section article {
     padding: .5rem;
     width: 80%;
 }
 
-main section h2 {
+section h2 {
     text-align: center;
     padding-bottom: .35rem;
     border-bottom: 1px solid black;
 }
 
+section a,
+.info a:hover {
+    text-decoration: underline;
+    text-underline-offset: .2rem;
+}
+
+section a {
+    color: darkslateblue;
+}
+
+article>h4:not(#message) {
+    margin: .75rem 0 0;
+}
+
+article>p:not(article>p:first-of-type:not(h4 + p)) {
+    margin: .25rem 0 0;
+}
+
+section a:hover,
+.info a:hover {
+    color: var(--nav-hover-link-color);
+}
+
 .spotlights {
-    gap: .5rem;
     padding-bottom: .5rem;
+    gap: .5rem;
+    background-color: lightgrey;
+    border: 1px solid black;
     margin-bottom: 1rem;
 }
 
@@ -249,14 +316,49 @@ main section h2 {
     border: 1px solid black;
 }
 
+.discover main figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.discover main figure picture,
+.discover main figure picture img {
+    align-self: center;
+    aspect-ratio: 4/3;
+    height: auto;
+}
+
+.discover main figure picture {
+    width: clamp(300px, 80%, 400px);
+}
+
+.discover main figure picture img {
+    width: 100%;
+}
+
+.discover main figure picture img:hover {
+    filter: saturate(75%);
+}
+
+.discover main figure figcaption {
+    text-align: center;
+}
+
+.discover footer {
+    grid-row: 5 / 6;
+}
+
 footer {
     grid-row: 4 / 5;
     background-color: black;
-    padding-bottom: 1rem;
+    padding: 1rem 0;
 
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
+    row-gap: 1rem;
 }
 
 .chamber,
@@ -298,14 +400,7 @@ footer {
     text-decoration: none;
 }
 
-.info a:hover {
-    color: var(--nav-hover-link-color);
-    text-decoration: underline;
-    text-underline-offset: .2rem;
-}
-
 .project {
-    margin-top: 1rem;
     flex-direction: column;
 }
 
@@ -320,21 +415,31 @@ footer {
     content: "🌞";
 }
 
-main.dark {
+.dark:not(.dark section) {
     color: white;
-    background-color: black;
+    background-color: #001122;
 }
 
-main.dark section {
+.dark #mode {
+    background-color: var(--nav-background-color);
+}
+
+.dark main section,
+.dark aside section {
+    color: black;
+    background-color: lightgrey;
+    border: 1px solid var(--secondary-color);
+}
+
+.dark .spotlights {
     background-color: darkgrey;
-    border: 3px solid var(--accent3-color);
-}
-
-main.dark section h2 {
-    border-bottom: 1px solid var(--accent3-color);
+    border: 1px solid var(--secondary-color);
 }
 
 .dark .spotlights article {
-    background-color: darkslategray;
-    border: 1px solid var(--accent3-color);
+    background-color: lightgrey;
+}
+
+.discover.dark main figure picture img {
+    border: 1px solid var(--secondary-color);
 }

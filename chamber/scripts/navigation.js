@@ -2,7 +2,7 @@ const hamburgerMenu = document.getElementById('menu')
 const navElement = document.querySelector('nav')
 const navigation = document.getElementById('nav-links')
 const mode = document.querySelector('#mode')
-const main = document.querySelector('main')
+const main = document.querySelector('body')
 
 function toggleNavLinks(navMode) {
   if (navMode === 'close') {

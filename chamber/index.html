@@ -17,14 +17,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Noto+Serif:ital,wght@0,400;1,600&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/medium.css">
-    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/base.css" media="all">
+    <link rel="stylesheet" href="styles/medium.css" media="(min-width: 500px)">
+    <link rel="stylesheet" href="styles/larger.css" media="(min-width: 1024px)">
 </head>
 
 <body>
     <header>
-        <a href="#">
+        <a href="index.html">
             <figure id="header-logo">
                 <img src="images/logo.webp" alt="Ancud township logo">
                 <figcaption>
@@ -35,8 +35,8 @@
         <nav>
             <a href="#" id="menu"></a>
             <div id="nav-links">
-                <a href="#">Home</a>
-                <a href="#">Discover</a>
+                <a href="index.html" class="active">Home</a>
+                <a href="discover.html">Discover</a>
                 <a href="#">Directory</a>
                 <a href="#" class="join">Join Us</a>
             </div>
@@ -45,12 +45,9 @@
     </header>
     <main>
         <div id="hero">
-            <!-- <div id="hero-img">
-                <img src="images/ancud.jpg" alt="Ancud houses photo">
-            </div> -->
             <picture>
                 <source media="(min-width: 1024px)" srcset="images/hero-large.webp">
-                <source media="(min-width: 767px)" srcset="images/hero-medium.webp">
+                <source media="(min-width: 768px)" srcset="images/hero-medium.webp">
                 <img src="images/hero-small.webp" alt="people working">
             </picture>
             <div id="bg"></div>
@@ -69,9 +66,9 @@
         <section id="weather">
             <h2>Weather</h2>
             <article>
-                <p aria-label="temperature"><strong>Temperature:</strong> 10°C</p>
-                <p aria-label="wind speed"><strong>Wind Speed:</strong> 10 km/h</p>
-                <p aria-label="wind chill"><strong>Wind Chill:</strong> </p>
+                <p data-id="temperature"><strong>Temperature:</strong> <span>10°F</span></p>
+                <p data-id="wind speed"><strong>Wind Speed:</strong> <span>10 mph</span></p>
+                <p data-id="wind chill"><strong>Wind Chill:</strong> <span></span></p>
             </article>
         </section>
         <section class="spotlights">
@@ -93,7 +90,7 @@
     <footer>
         <section class="chamber">
             <figure>
-                <img src="images/logo.webp" alt="Ancud township logo">
+                <img src="images/footer-logo.webp" alt="Ancud township logo" loading="lazy">
                 <figcaption>
                     <h3>Ancud Chamber of Commerce</h3>
                     <p>660 Blanco Encalada</p>
@@ -110,11 +107,9 @@
             </address>
         </section>
         <section class="project">
-            <p aria-label="copyright">
-                <span data-id="year">&copy;</span> Ancud Chamber
-            </p>
-            <p aria-label="author">Vicente M. Ferrer</p>
-            <p aria-label="project">WDD 230 Project</p>
+            <p><span data-id="year">&copy;</span> Ancud Chamber</p>
+            <p>Vicente M. Ferrer</p>
+            <p>WDD 230 Project</p>
             <p id="lastModified"></p>
         </section>
     </footer>
