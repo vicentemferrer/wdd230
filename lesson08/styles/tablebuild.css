@@ -1,0 +1,54 @@
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+main {
+    height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+table {
+    width: 400px;
+    border-collapse: collapse;
+}
+
+caption {
+    padding: 10px;
+    caption-side: bottom;
+}
+
+th,
+td {
+    padding: .5rem;
+    text-align: center;
+    border: 1px solid;
+}
+
+thead th,
+thead td {
+    border-color: black;
+}
+
+tbody th,
+tbody td {
+    border-color: hsla(0, 0%, 33%, .3);
+}
+
+thead {
+    color: white;
+    background-color: black;
+}
+
+thead tr:nth-child(2) td {
+    background-color: hsl(243, 100%, 7%);
+}
+
+thead tr:nth-child(2) th {
+    background-color: darkslategray;
+}
+
+tbody tr:nth-child(even) {
+    background-color: whitesmoke;
+}
