@@ -1,0 +1,106 @@
+form {
+    grid-column: 2 / 4;
+    font-family: 'Noto Serif';
+    font-size: 16px;
+}
+
+form h2 {
+    text-align: left;
+    font-size: 1.75rem;
+}
+
+form label {
+    display: block;
+    padding-top: 1rem;
+    color: #9c2c13;
+    font-size: .8rem;
+}
+
+form label input {
+    appearance: none;
+    -webkit-appearance: none;
+    display: block;
+    font-size: 1rem;
+    border: solid 1px #999;
+    border-radius: 4px;
+    padding: .75rem;
+    width: 100%;
+    max-width: 20rem;
+}
+
+form label input#rating {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    border: none;
+    height: 44px;
+}
+
+form label input#rating:focus {
+    outline: none;
+}
+
+form label input#rating::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 7.5px;
+    cursor: pointer;
+    background: #025ec1;
+    border-radius: 5px;
+    margin: auto 0;
+    border: 1px solid #000;
+}
+
+form label input#rating::-webkit-slider-thumb {
+    height: 15px;
+    width: 15px;
+    border-radius: 7px;
+    background: #3083DC;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -4px;
+    border: 1px solid #000;
+}
+
+form label input#rating:focus::-webkit-slider-runnable-track {
+    background: #025ec1;
+}
+
+form label input#rating::-moz-range-track {
+    width: 100%;
+    height: 7.5px;
+    cursor: pointer;
+    background: #025ec1;
+    border-radius: 5px;
+    margin: auto 0;
+    border: 1px solid #000;
+}
+
+form label input#rating::-moz-range-thumb {
+    height: 15px;
+    width: 15px;
+    border-radius: 7px;
+    background: #3083DC;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    margin-top: -4px;
+    border: 1px solid #000;
+}
+
+form input.submitBtn {
+    border: none;
+    background-color: #9c2c13;
+    color: white;
+    border-radius: .25rem;
+    padding: .75rem 1.5rem;
+    width: 96%;
+    max-width: 15rem;
+}
+
+form label input:required {
+    border-left: red solid 6px;
+}
+
+form label input:required:valid {
+    border-left: green solid 6px;
+}

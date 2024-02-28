@@ -132,13 +132,13 @@ main {
     text-align: center;
 }
 
-main h2,
+main>h2,
 .card,
 .hero p {
     margin: 0 auto;
 }
 
-h2 {
+main>h2 {
     grid-column: 1/4;
     width: 90%;
     padding: 1rem;

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vicente Ferrer - WDD 230 - Web Frontend Development</title>
+    <meta name="description" content="WDD 230 - Web Frontend Development, Vicente Ferrer, Course Assignment Form">
+    <meta name="author" content="Vicente Ferrer">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+
+<body>
+    <header>
+        <img src="images/profile.webp" loading="lazy" alt="Vicente's profile photo">
+        <h1>Vicente Ferrer</h1>
+    </header>
+    <nav>
+        <a href="#" id="menu"></a>
+        <a href="index.html">Home</a>
+        <a href="lesson03/chamber-site-plan.html">Site Plan</a>
+        <a href="chamber/">Chamber</a>
+        <a href="https://www.byui.edu/" target="_blank">BYU-Idaho</a>
+        <a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank">Scripture</a>
+    </nav>
+    <main>
+        <form action="record.html" method="get">
+            <h2>Sign In & Rate This Website</h2>
+            <div id="message"></div>
+            <label>Username*
+                <input type="text" id="username" name="username" required>
+            </label>
+            <label>Password*
+                <input type="password" id="password" name="password" pattern="[A-Za-z0-9]{8}" required>
+            </label>
+            <label>Confirm Your Password*
+                <input type="password" id="password2" name="passwordRepeat" pattern="[A-Za-z0-9]{8}" required>
+            </label>
+            <label>Email*
+                <input type="email" id="email" name="email" title="A valid byui.edu email address."
+                    pattern="[a-zA-Z0-9_.\-]+@byui.edu" required>
+            </label>
+            <label>Page Rating
+                <input type="range" id="rating" name="rating" min="1" max="10" value="1" step="1">
+            </label>
+            <input type="submit" value="Join & Rate" class="submitBtn">
+        </form>
+    </main>
+    <footer>
+        <p>
+            <span>&copy;</span>
+            Vicente Ferrer
+            Chile <span>🇨🇱</span>
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+    <script type="module" src="scripts/getdates.js"></script>
+    <script type="module" src="scripts/navigation.js"></script>
+    <script type="module" src="scripts/validation.js"></script>
+</body>
+
+</html>
