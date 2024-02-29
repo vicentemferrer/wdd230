@@ -4,15 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vicente Ferrer - WDD 230 - Page Rating</title>
-    <meta name="description" content="WDD 230 - Web Frontend Development, Vicente Ferrer, Course Assignment Form">
+    <title>Vicente Ferrer - WDD 230 - Rating Received</title>
+    <meta name="description"
+        content="WDD 230 - Web Frontend Development, Vicente Ferrer, Course Assignment Record Confirmation">
     <meta name="author" content="Vicente Ferrer">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/fonts.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
-    <link rel="stylesheet" href="styles/form.css">
 </head>
 
 <body>
@@ -29,27 +29,7 @@
         <a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank">Scripture</a>
     </nav>
     <main>
-        <form action="record.html" method="get">
-            <h2>Rate This Website</h2>
-            <div id="message"></div>
-            <label>Username*
-                <input type="text" id="username" name="username" required>
-            </label>
-            <label>Password*
-                <input type="password" id="password" name="password" pattern="[A-Za-z0-9]{8,}" required>
-            </label>
-            <label>Confirm Your Password*
-                <input type="password" id="password2" name="passwordRepeat" pattern="[A-Za-z0-9]{8,}" required>
-            </label>
-            <label>Email*
-                <input type="email" id="email" name="email" title="A valid byui.edu email address."
-                    pattern="[a-zA-Z0-9_.\-]+@byui.edu" required>
-            </label>
-            <label>Page Rating (1 - 10)
-                <input type="range" id="rating" name="rating" min="1" max="10" value="1" step="1">
-            </label>
-            <input type="submit" value="Rate This Website" class="submitBtn">
-        </form>
+        <h2>Your rating was recorded! Thank you for your feedback!</h2>
     </main>
     <footer>
         <p>
@@ -61,7 +41,6 @@
     </footer>
     <script type="module" src="scripts/getdates.js"></script>
     <script type="module" src="scripts/navigation.js"></script>
-    <script type="module" src="scripts/form.js"></script>
 </body>
 
 </html>

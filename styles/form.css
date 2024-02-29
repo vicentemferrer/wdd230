@@ -1,7 +1,25 @@
+:root {
+    --gradient-fill: 6%;
+    --gradient-color-1: blue;
+    --gradient-color-2: #EEE;
+}
+
 form {
     grid-column: 2 / 4;
     font-family: 'Noto Serif';
     font-size: 16px;
+    height: 100%;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+}
+
+form h2,
+form label {
+    width: 100%;
+    max-width: 20rem;
 }
 
 form h2 {
@@ -17,74 +35,12 @@ form label {
 }
 
 form label input {
-    appearance: none;
-    -webkit-appearance: none;
     display: block;
-    font-size: 1rem;
-    border: solid 1px #999;
-    border-radius: 4px;
+    width: 100%;
     padding: .75rem;
-    width: 100%;
-    max-width: 20rem;
-}
-
-form label input#rating {
-    appearance: none;
-    -webkit-appearance: none;
-    width: 100%;
-    border: none;
-    height: 44px;
-}
-
-form label input#rating:focus {
-    outline: none;
-}
-
-form label input#rating::-webkit-slider-runnable-track {
-    width: 100%;
-    height: 7.5px;
-    cursor: pointer;
-    background: #025ec1;
-    border-radius: 5px;
-    margin: auto 0;
-    border: 1px solid #000;
-}
-
-form label input#rating::-webkit-slider-thumb {
-    height: 15px;
-    width: 15px;
-    border-radius: 7px;
-    background: #3083DC;
-    cursor: pointer;
-    -webkit-appearance: none;
-    margin-top: -4px;
-    border: 1px solid #000;
-}
-
-form label input#rating:focus::-webkit-slider-runnable-track {
-    background: #025ec1;
-}
-
-form label input#rating::-moz-range-track {
-    width: 100%;
-    height: 7.5px;
-    cursor: pointer;
-    background: #025ec1;
-    border-radius: 5px;
-    margin: auto 0;
-    border: 1px solid #000;
-}
-
-form label input#rating::-moz-range-thumb {
-    height: 15px;
-    width: 15px;
-    border-radius: 7px;
-    background: #3083DC;
-    cursor: pointer;
-    appearance: none;
-    -webkit-appearance: none;
-    margin-top: -4px;
-    border: 1px solid #000;
+    border-radius: 4px;
+    border: solid 1px #999;
+    font-size: 1rem;
 }
 
 form input.submitBtn {
@@ -103,4 +59,39 @@ form label input:required {
 
 form label input:required:valid {
     border-left: green solid 6px;
+}
+
+form label input#rating {
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    height: 44px;
+}
+
+form label input#rating::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 30px;
+    width: 30px;
+    margin-top: -10px;
+    background-color: #efb000;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    transition: background .3s ease-in-out;
+}
+
+form label input#rating::-webkit-slider-runnable-track {
+    height: 10px;
+    background-image: linear-gradient(90deg, var(--gradient-color-1) var(--gradient-fill), var(--gradient-color-2) var(--gradient-fill));
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    border-radius: 5px;
+}
+
+#message {
+    display: none;
+    color: #a00;
+    background-color: #f003;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid #a00;
 }
