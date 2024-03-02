@@ -373,8 +373,9 @@ label.top textarea {
 form label.top,
 form div {
     padding-top: 1rem;
-    color: var(--accent2-color);
+    color: black;
     font-size: .8rem;
+    font-weight: bold;
 }
 
 form label.top input,
@@ -488,7 +489,6 @@ footer {
 
 .chamber figcaption {
     width: 20ch;
-    text-wrap: balance;
 }
 
 .info address {
@@ -541,11 +541,6 @@ footer {
 
 .dark .spotlights article {
     background-color: lightgrey;
-}
-
-.dark form label.top,
-.dark form div {
-    color: var(--accent3-color);
 }
 
 .dark form label.top input,
