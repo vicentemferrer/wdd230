@@ -4,13 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ancud Chamber of Commerce | Home</title>
+    <title>Ancud Chamber of Commerce | Subscribed</title>
     <meta name="description" content="WDD 230 - Web Frontend Development, Vicente Ferrer, Chamber of Commerce Project">
     <meta name="author" content="Vicente Ferrer">
-    <meta property="og:title" content="The Ancud Chamber of Commerce | Home" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://th.bing.com/th/id/OIP.sfagmHSEGPmkHJQUFUPqQQHaFj?rs=1&pid=ImgDetMain" />
-    <meta property="og:url" content="https://vicentemferrer.github.io/wdd230/chamber/" />
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../styles/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,7 +18,7 @@
     <link rel="stylesheet" href="styles/larger.css" media="(min-width: 1024px)">
 </head>
 
-<body>
+<body class="alternative thanks">
     <header>
         <a href="index.html">
             <figure id="header-logo">
@@ -35,7 +31,7 @@
         <nav>
             <a href="#" id="menu"></a>
             <div id="nav-links">
-                <a href="index.html" class="active">Home</a>
+                <a href="index.html">Home</a>
                 <a href="discover.html">Discover</a>
                 <a href="#">Directory</a>
                 <a href="join.html">Join Us</a>
@@ -44,47 +40,8 @@
         </nav>
     </header>
     <main>
-        <div id="hero">
-            <picture>
-                <source media="(min-width: 1024px)" srcset="images/hero-large.webp">
-                <source media="(min-width: 768px)" srcset="images/hero-medium.webp">
-                <img src="images/hero-small.webp" alt="people working">
-            </picture>
-            <div id="bg"></div>
-            <div id="hero-content">
-                <h2>The Heart of Our Town</h2>
-                <a href="join.html" class="join">Join Now</a>
-            </div>
-        </div>
         <section>
-            <h2>Events</h2>
-            <article>
-                <h3>Ribbon Cutting - The Diamond Shack</h3>
-                <p>Join us for the grand opening of The Diamond Shack, Thursday at 1:00 p.m. </p>
-            </article>
-        </section>
-        <section id="weather">
-            <h2>Weather</h2>
-            <article>
-                <p data-id="temperature"><strong>Temperature:</strong> <span>10°F</span></p>
-                <p data-id="wind speed"><strong>Wind Speed:</strong> <span>10 mph</span></p>
-                <p data-id="wind chill"><strong>Wind Chill:</strong> <span></span></p>
-            </article>
-        </section>
-        <section class="spotlights">
-            <h2>Member Spotlights</h2>
-            <article>
-                <h3>Thankful Transport</h3>
-                <p>We get it there for you!" hello@thankfultransport.com +999-9999-9999 Website</p>
-            </article>
-            <article>
-                <h3>Code Primera</h3>
-                <p>After school coding! contact@codeprimera.com +999-9999-9999 Website</p>
-            </article>
-            <article>
-                <h3>Build A Treefort</h3>
-                <p>Over 1000 Plans! builda@treefort.com +888-8888-8888 Website</p>
-            </article>
+            <h2>Your subscription was received! Let's work together!</h2>
         </section>
     </main>
     <footer>
@@ -113,9 +70,8 @@
             <p id="lastModified"></p>
         </section>
     </footer>
-    <script src="scripts/getdates.js" type="module"></script>
-    <script src="scripts/navigation.js" type="module"></script>
-    <script src="scripts/windchill.js" type="module"></script>
+    <script type="module" src="scripts/getdates.js"></script>
+    <script type="module" src="scripts/navigation.js"></script>
 </body>
 
 </html>

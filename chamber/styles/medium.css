@@ -3,7 +3,7 @@
         --nav-background-color: transparent;
     }
 
-    .discover header {
+    .alternative header {
         background-color: black;
     }
 
@@ -41,16 +41,23 @@
         text-underline-offset: .2rem;
     }
 
-    .discover aside {
+    .discover aside,
+    .alternative main,
+    .alternative.thanks main {
         grid-row: 2 / 3;
     }
 
-    .discover main {
+    .alternative.discover main {
         grid-row: 3 / 4;
     }
 
     main {
         grid-row: 1 / 3;
+    }
+
+    .alternative.thanks main {
+        justify-self: center;
+        align-self: center;
     }
 
     .discover footer {
@@ -98,18 +105,19 @@
 
     #header-logo figcaption {
         display: block;
-        align-self: center;
-        width: 25ch;
-        font-size: .70rem;
     }
 
     nav {
         width: 50%;
     }
 
-    .discover main {
+    .alternative.discover main {
         grid-column: 3 / 4;
         grid-row: 2 / 3;
+    }
+
+    .alternative main {
+        grid-template-columns: auto 1fr 1fr auto;
     }
 
     main {
@@ -139,7 +147,7 @@
         width: 100%;
     }
 
-    main section:first-of-type {
+    main section:first-of-type:not(form+section) {
         grid-column: 2 / 3;
     }
 
@@ -166,6 +174,10 @@
 
     .spotlights h2 {
         display: none;
+    }
+
+    #membershipInfo {
+        display: block;
     }
 
     footer {

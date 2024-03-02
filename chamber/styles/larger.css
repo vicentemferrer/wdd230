@@ -2,4 +2,8 @@
     nav {
         width: 40%;
     }
+
+    form label.sbs {
+        padding: .4rem 0;
+    }
 }
