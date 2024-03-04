@@ -1,0 +1,30 @@
+{
+    "wardInformation": {
+        "familyName": "Walker",
+        "moveInDate": "2024-03-04",
+        "numberOfPeople": 4,
+        "visitedByBishopric": true,
+        "familyMembers": [
+            {
+                "name": "John Walker",
+                "gender": "Male",
+                "birthdate": "1985-01-20"
+            },
+            {
+                "name": "Jane Walker",
+                "gender": "Female",
+                "birthdate": "1988-04-12"
+            },
+            {
+                "name": "David Walker",
+                "gender": "Male",
+                "birthdate": "2010-12-03"
+            },
+            {
+                "name": "Emily Walker",
+                "gender": "Female",
+                "birthdate": "2012-11-27"
+            }
+        ]
+    }
+}
