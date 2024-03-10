@@ -43,6 +43,7 @@
 
     .discover aside,
     .alternative main,
+    .alternative.directory main,
     .alternative.thanks main {
         grid-row: 2 / 3;
     }

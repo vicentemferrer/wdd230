@@ -164,6 +164,7 @@ aside section {
 }
 
 main,
+.alternative.directory main,
 .alternative.thanks main {
     grid-column: 2 / 3;
     grid-row: 3 / 4;
@@ -453,6 +454,25 @@ form .submitBtn {
     content: '- ';
 }
 
+#members {
+    grid-column: 2 / 3;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: .5rem;
+}
+
+#members section {
+    padding: .5rem;
+}
+
+#members section img {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* ---------- Footer ---------- */
+
 footer {
     grid-row: 4 / 5;
     background-color: black;
@@ -506,7 +526,7 @@ footer {
     flex-direction: column;
 }
 
-/* Dark Mode */
+/* ---------- Dark Mode ---------- */
 
 #mode::before {
     content: "🌙";
