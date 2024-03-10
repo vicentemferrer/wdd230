@@ -1,0 +1,119 @@
+[
+    {
+        "name": "China-Thai",
+        "address": "663 Chacabuco St., Ancud",
+        "phone": "+56 9 9731-7136",
+        "socialLinks": [
+            {
+                "url": "https://www.instagram.com/chinathai_ancud/",
+                "type": "instagram"
+            }
+        ],
+        "imageURL": "https://scontent.cdninstagram.com/v/t51.29350-15/313906972_498113085691960_401818618875336135_n.webp?stp=dst-jpg_e35_s1080x1080&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDEyMzEuc2RyIn0&_nc_ht=scontent.cdninstagram.com&_nc_cat=104&_nc_ohc=fU4UgWwavrkAX9gMBBq&edm=APs17CUBAAAA&ccb=7-5&ig_cache_key=Mjk2MjcwMTY2NTAwNjc1ODY4Mg%3D%3D.2-ccb7-5&oh=00_AfDqZV2Er0RkjMFrkXMB6_t7Rrni0WVNxIdPzZiE5OkrSg&oe=65EE8A1D&_nc_sid=10d13b",
+        "membership": "bronze",
+        "category": "food",
+        "service": "Restaurant"
+    },
+    {
+        "name": "Hostal Chiloé Mágico",
+        "address": "198-130 Gral. Baquedano St., Ancud",
+        "phone": "",
+        "socialLinks": [
+            {
+                "url": "https://www.instagram.com/chiloemagicohostal/",
+                "type": "instagram"
+            }
+        ],
+        "imageURL": "https://scontent.cdninstagram.com/v/t51.29350-15/273433046_998553357411453_5476377859074072666_n.webp?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4zMjB4MzIwLnNkciJ9&_nc_ht=scontent.cdninstagram.com&_nc_cat=109&_nc_ohc=WnyQpkj-V30AX_bmRnu&edm=APs17CUBAAAA&ccb=7-5&ig_cache_key=Mjc2OTQ2MzcwNDkwNDgwNzc2Mw%3D%3D.2-ccb7-5&oh=00_AfC4KnqZO5Ntye8GqYLKC_9fCJjSI2igfgmSJbxnecx3Ng&oe=65F11632&_nc_sid=10d13b",
+        "membership": "silver",
+        "category": "travel",
+        "service": "Lodging"
+    },
+    {
+        "name": "Full Print",
+        "address": "797 Chacabuco St., Ancud",
+        "phone": "+56 9 5044-3336",
+        "socialLinks": [
+            {
+                "url": "https://www.instagram.com/fullprint.chiloe/",
+                "type": "instagram"
+            }
+        ],
+        "imageURL": "images/full-print-logo.webp",
+        "membership": "bronze",
+        "category": "creative",
+        "service": "Graphic Design"
+    },
+    {
+        "name": "The Church of Jesus Christ of Latter-Day Saints",
+        "address": "417 Bellavista St., Ancud",
+        "phone": "",
+        "socialLinks": [
+            {
+                "url": "https://www.facebook.com/sud.ramaancud",
+                "type": "facebook"
+            },
+            {
+                "url": "https://www.instagram.com/iglesiadejesucristo_sas/",
+                "type": "instagram"
+            }
+        ],
+        "imageURL": "https://noticias-mx.laiglesiadejesucristo.org/media/160x160/nombre-iglesia-jeucristo-santos-ultimos-dias.png",
+        "membership": "non-profit",
+        "category": "non-profit",
+        "service": "Church"
+    },
+    {
+        "name": "Face",
+        "address": "720 Chacabuco St., Ancud",
+        "phone": "+56 9 8935-4958",
+        "socialLinks": [
+            {
+                "url": "https://www.capacitacionesface.cl/",
+                "type": "website"
+            }
+        ],
+        "imageURL": "https://www.capacitacionesface.cl/imagenes/Logo_320x320.jpg",
+        "membership": "gold",
+        "category": "education",
+        "service": "Training"
+    },
+    {
+        "name": "Chilotec",
+        "address": "263 Pudeto St., Ancud",
+        "phone": "",
+        "socialLinks": [
+            {
+                "url": "https://chilotec.cl/",
+                "type": "website"
+            },
+            {
+                "url": "https://www.instagram.com/chilotec.cl/",
+                "type": "instagram"
+            }
+        ],
+        "imageURL": "https://scontent.cdninstagram.com/v/t51.2885-15/73387298_185012005964108_6427759087672095710_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi44MDB4ODAwLnNkciJ9&_nc_ht=scontent.cdninstagram.com&_nc_cat=108&_nc_ohc=bs3K7oa_svEAX-gRw74&edm=APs17CUBAAAA&ccb=7-5&ig_cache_key=MjE3Nzk1MzY3ODIwNDg0MDI3NQ%3D%3D.2-ccb7-5&oh=00_AfBescEwOQJ4FOLOJHf3CA3g-uE1-Svi0quypPy1lJvl3Q&oe=65F01685&_nc_sid=10d13b",
+        "membership": "gold",
+        "category": "technology",
+        "service": "Computer & IT"
+    },
+    {
+        "name": "Ancud Tour",
+        "address": "Libertad & Pudeto St., Ancud",
+        "phone": "+56 9 8849-4136",
+        "socialLinks": [
+            {
+                "url": "https://www.facebook.com/people/Ancud-tour/100050831875934/",
+                "type": "facebook"
+            },
+            {
+                "url": "https://www.instagram.com/ancud.tour/",
+                "type": "instagram"
+            }
+        ],
+        "imageURL": "https://scontent.fscl1-1.fna.fbcdn.net/v/t39.30808-1/267663898_422005926170466_8035966968357695125_n.jpg?stp=dst-jpg_p480x480&_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGetpIuYCxK5YmNK1oB9RYVA5Y18si22eUDljXyyLbZ5SWPGTjqPsERRxbn7WuuYBITPJpC5h9yn08shtWNAB6v&_nc_ohc=gzEyJPq3cQEAX-UifuV&_nc_ht=scontent.fscl1-1.fna&oh=00_AfCMuulrn3kTalNJbGkwXROfCSJSXg9SNz_6wFTRvNzBRw&oe=65F11837",
+        "membership": "silver",
+        "category": "travel",
+        "service": "Tourism & Transportation"
+    }
+]
