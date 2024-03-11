@@ -22,6 +22,7 @@ const weatherComponent = ({ description, icon }, temp) => {
 
   img.setAttribute('src', iconsrc)
   img.setAttribute('alt', 'Forecast icon')
+  img.setAttribute('loading', 'lazy')
 
   tempP.innerHTML = `${temp.toFixed(0)}&deg;F`
   descriptionP.textContent = `${toTitleCase(description)}`
