@@ -167,9 +167,31 @@ main>h2 {
     padding: .5rem;
 }
 
-.card p {
+.card p,
+#weather {
     margin: .5rem auto;
+}
+
+.card>p {
+
     text-align: center;
+}
+
+#weather figure {
+    margin: .5 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+#weather img {
+    object-fit: cover;
+}
+
+.temp {
+    font-size: 2rem;
 }
 
 ::marker {

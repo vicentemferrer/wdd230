@@ -120,6 +120,15 @@
                     "title": "Latter-Day Prophets"
                 }
             ]
+        },
+        {
+            "lesson": "10",
+            "links": [
+                {
+                    "url": "lesson10/weather.html",
+                    "title": "Weather API"
+                }
+            ]
         }
     ]
 }
