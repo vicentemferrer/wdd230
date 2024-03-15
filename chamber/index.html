@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="styles/larger.css" media="(min-width: 1024px)">
 </head>
 
-<body>
+<body class="initial">
     <header>
         <a href="index.html">
             <figure id="header-logo">
@@ -56,22 +56,19 @@
                 <a href="join.html" class="join">Join Now</a>
             </div>
         </div>
-        <section>
+        <section class="card">
             <h2>Events</h2>
             <article>
                 <h3>Ribbon Cutting - The Diamond Shack</h3>
                 <p>Join us for the grand opening of The Diamond Shack, Thursday at 1:00 p.m. </p>
             </article>
         </section>
-        <section id="weather">
+        <section class="card" id="weather">
             <h2>Weather</h2>
             <article>
-                <p data-id="temperature"><strong>Temperature:</strong> <span>10°F</span></p>
-                <p data-id="wind speed"><strong>Wind Speed:</strong> <span>10 mph</span></p>
-                <p data-id="wind chill"><strong>Wind Chill:</strong> <span></span></p>
             </article>
         </section>
-        <section class="spotlights">
+        <section class="card spotlights">
             <h2>Member Spotlights</h2>
             <article>
                 <h3>Thankful Transport</h3>
@@ -115,7 +112,7 @@
     </footer>
     <script src="scripts/getdates.js" type="module"></script>
     <script src="scripts/navigation.js" type="module"></script>
-    <script src="scripts/windchill.js" type="module"></script>
+    <script src="scripts/weather.js" type="module"></script>
 </body>
 
 </html>

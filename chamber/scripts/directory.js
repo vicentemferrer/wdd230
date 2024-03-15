@@ -89,6 +89,8 @@ const memberComponent = ({ name, address, phone, socialLinks, imageURL, membersh
   memberCard.appendChild(memberArticle)
   memberCard.appendChild(memberSocial)
 
+  memberCard.setAttribute('class', 'card')
+
   return memberCard
 }
 
