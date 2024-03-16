@@ -179,6 +179,15 @@
         grid-template-columns: auto repeat(2, 1fr) 200px repeat(2, 1fr) auto;
     }
 
+    .banner {
+        width: 75vw;
+        left: calc(100vw / 2 - 75vw / 2);
+    }
+
+    .banner p {
+        text-align: center;
+    }
+
     /* Dark Mode */
 
     .dark .spotlights {

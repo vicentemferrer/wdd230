@@ -1,3 +1,4 @@
+import { toTitleCase, urlBuilder, diffCalc, getWeekday, divGenerator } from './helpers.js'
 import { windChill } from './windchill.js'
 
 const currentWeatherURL = `https://api.openweathermap.org/data/2.5/weather`
@@ -10,21 +11,6 @@ const options = {
   appid: '0e34dfa26862e0a73a00a6bbb75e8b79'
 }
 
-const toTitleCase = text => text.split(' ').filter(word => word !== '').map(word => word[0].toUpperCase() + word.slice(1)).join(' ')
-
-const urlBuilder = (base, options) => `${base}?${Object.entries(options).map(option => option.join('=')).join('&')}`
-
-const getWeekday = index => {
-  const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
-
-  return weekdays[index].slice(0, 3)
-}
-
-const diffCalc = date => {
-  const msToDays = 24 * 60 * 60 * 1000
-  return (Date.now() - date) / msToDays
-}
-
 const forecastDepurer = (list) => {
   const grouped = Object.groupBy(list, ({ dt_txt }) => new Date(dt_txt).getDay())
 
@@ -34,17 +20,7 @@ const forecastDepurer = (list) => {
     return event
   })
 
-  return events.sort((a, b) => a.dt - b.dt)
-}
-
-const divGenerator = (...classList) => {
-  const div = document.createElement('div')
-
-  classList.forEach(classItem => {
-    div.classList.add(classItem)
-  })
-
-  return div
+  return events.sort((a, b) => a.dt - b.dt).filter(event => typeof event !== 'undefined')
 }
 
 const itemComponent = (textItem, content, contentArr = [], isArrayNeeded = false, fn = () => { }, isFnNeeded = false) => {
@@ -93,7 +69,7 @@ const forecastItemComponent = ({ description, icon }, temp, day) => {
 
   const iconsrc = `https://openweathermap.org/img/w/${icon}.png`
 
-  titleP.innerHTML = `<strong>${getWeekday(day)}</strong>`
+  titleP.innerHTML = `<strong>${getWeekday(day).slice(0, 3)}</strong>`
 
   img.setAttribute('src', iconsrc)
   img.setAttribute('alt', toTitleCase(description))
@@ -154,7 +130,6 @@ async function apiFetch(url, isCurrent = true) {
     console.error(error)
   }
 }
-
 
 apiFetch(urlBuilder(currentWeatherURL, options))
 apiFetch(urlBuilder(forecastURL, options), false)

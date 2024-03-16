@@ -1,6 +1,6 @@
-const membersURL = 'https://vicentemferrer.github.io/wdd230/chamber/data/members.json'
+import { toTitleCase } from './helpers.js'
 
-const toTitleCase = text => text.split(' ').filter(word => word !== '').map(word => word[0].toUpperCase() + word.slice(1)).join(' ')
+const membersURL = 'https://vicentemferrer.github.io/wdd230/chamber/data/members.json'
 
 const socialIconElement = (type, isWebsite = false) => {
   const icon = document.createElement('i')

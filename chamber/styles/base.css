@@ -602,6 +602,39 @@ footer {
 
 /* ---------- End of Footer ---------- */
 
+/* ---------- Banner ---------- */
+
+.banner {
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: row;
+    gap: .25rem;
+
+    background-color: lightgreen;
+    border-radius: 0 0 .5rem .5rem;
+
+    z-index: 1;
+}
+
+.banner button {
+    background-color: #FFFA;
+    border: 0;
+    border-radius: 0 0 0 .5rem;
+    padding-inline: .5rem;
+}
+
+.banner p {
+    padding: .5rem .25rem .5rem 0;
+    color: darkgreen;
+    flex-grow: 1;
+}
+
+/* ---------- End of Banner ---------- */
+
 /* ---------- Dark Mode ---------- */
 
 #mode::before {

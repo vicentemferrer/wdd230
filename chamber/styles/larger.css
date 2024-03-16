@@ -6,4 +6,8 @@
     form label.sbs {
         padding: .4rem 0;
     }
+
+    .banner {
+        font-size: 1.25rem;
+    }
 }
