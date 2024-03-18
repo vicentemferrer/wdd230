@@ -106,5 +106,5 @@ function displayForecast({ list }) {
   weatherInfo.appendChild(row)
 }
 
-apiFetch(urlBuilder(currentWeatherURL, options), (data) => displayCurrent(data))
-apiFetch(urlBuilder(forecastURL, options), (data) => displayForecast(data))
+apiFetch(urlBuilder(currentWeatherURL, options), displayCurrent)
+apiFetch(urlBuilder(forecastURL, options), displayForecast)

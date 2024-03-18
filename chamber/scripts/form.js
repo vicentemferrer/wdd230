@@ -27,12 +27,8 @@ function printDetail(key, articleElement) {
 
 dateInput.value = Date.now()
 
-membershipTypes.forEach(type => type.addEventListener('input', (event) => {
-  printDetail(event.target.value, membershipArticle)
-  console.log(memberships)
-}))
+membershipTypes.forEach(type => type.addEventListener('input', (event) => printDetail(event.target.value, membershipArticle)))
 
 apiFetch(membershipsURL, (data) => {
   memberships = data
-  console.log('Made')
 })

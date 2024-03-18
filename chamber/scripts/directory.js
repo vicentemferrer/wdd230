@@ -69,11 +69,11 @@ const memberComponent = ({ name, address, phone, socialLinks, imageURL, membersh
 
   socialLinksComposed.forEach(link => memberSocial.appendChild(link))
 
-  memberArticle.appendChild(memberInfo)
+  memberArticle.appendChild(memberName)
   memberArticle.appendChild(memberContact)
+  memberArticle.appendChild(memberInfo)
 
   memberCard.appendChild(memberLogo)
-  memberCard.appendChild(memberName)
   memberCard.appendChild(memberArticle)
   memberCard.appendChild(memberSocial)
 
