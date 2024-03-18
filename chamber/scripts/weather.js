@@ -1,4 +1,4 @@
-import { toTitleCase, urlBuilder, diffCalc, getWeekday, divGenerator } from './helpers.js'
+import { toTitleCase, urlBuilder, diffCalc, getWeekday, divGenerator, itemComponent, apiFetch } from './helpers.js'
 import { windChill } from './windchill.js'
 
 const currentWeatherURL = `https://api.openweathermap.org/data/2.5/weather`
@@ -21,16 +21,6 @@ const forecastDepurer = (list) => {
   })
 
   return events.sort((a, b) => a.dt - b.dt).filter(event => typeof event !== 'undefined')
-}
-
-const itemComponent = (textItem, content, contentArr = [], isArrayNeeded = false, fn = () => { }, isFnNeeded = false) => {
-  const paragraph = document.createElement('p')
-
-  const itemContent = isFnNeeded ? isArrayNeeded ? fn(...contentArr) : fn(content) : content
-
-  paragraph.innerHTML = `<strong>${toTitleCase(textItem)}:</strong> ${itemContent}`
-
-  return paragraph
 }
 
 const currentWeatherComponent = ({ description, icon }, temp) => {
@@ -95,8 +85,8 @@ function displayCurrent({ main: { temp, humidity }, wind: { speed }, weather: [f
 
   const percentParser = (humidity) => `${humidity}%`
 
-  container.appendChild(itemComponent('wind chill', '', [temp, speed], true, windChill, true))
-  container.appendChild(itemComponent('humidity', humidity, [], false, percentParser, true))
+  container.appendChild(itemComponent('wind chill', '', windChill, true, [temp, speed], true))
+  container.appendChild(itemComponent('humidity', humidity, percentParser, true))
   row.appendChild(currentWeatherComponent(firstEvent, temp))
   row.appendChild(container)
 
@@ -116,20 +106,5 @@ function displayForecast({ list }) {
   weatherInfo.appendChild(row)
 }
 
-async function apiFetch(url, isCurrent = true) {
-  const response = await fetch(url)
-
-  try {
-    if (!response.ok) throw Error(await response.text())
-
-    const data = await response.json()
-
-    isCurrent ? displayCurrent(data) : displayForecast(data)
-
-  } catch (error) {
-    console.error(error)
-  }
-}
-
-apiFetch(urlBuilder(currentWeatherURL, options))
-apiFetch(urlBuilder(forecastURL, options), false)
+apiFetch(urlBuilder(currentWeatherURL, options), (data) => displayCurrent(data))
+apiFetch(urlBuilder(forecastURL, options), (data) => displayForecast(data))

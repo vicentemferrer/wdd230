@@ -13,6 +13,16 @@ const getWeekday = index => {
   return weekdays[index]
 }
 
+const itemComponent = (textItem, content, fn = () => { }, isFnNeeded = false, contentArr = [], isArrayNeeded = false) => {
+  const paragraph = document.createElement('p')
+
+  const itemContent = isFnNeeded ? isArrayNeeded ? fn(...contentArr) : fn(content) : content
+
+  paragraph.innerHTML = `<strong>${toTitleCase(textItem)}:</strong> ${itemContent}`
+
+  return paragraph
+}
+
 const divGenerator = (...classList) => {
   const div = document.createElement('div')
 
@@ -23,4 +33,19 @@ const divGenerator = (...classList) => {
   return div
 }
 
-export { toTitleCase, urlBuilder, diffCalc, getWeekday, divGenerator }
+async function apiFetch(url, fn) {
+  const response = await fetch(url)
+
+  try {
+    if (!response.ok) throw Error(await response.text())
+
+    const data = await response.json()
+
+    fn(data)
+
+  } catch (error) {
+    console.error(error)
+  }
+}
+
+export { toTitleCase, urlBuilder, diffCalc, getWeekday, divGenerator, itemComponent, apiFetch }

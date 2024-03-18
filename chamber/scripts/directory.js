@@ -1,4 +1,4 @@
-import { toTitleCase } from './helpers.js'
+import { toTitleCase, itemComponent, apiFetch } from './helpers.js'
 
 const membersURL = 'https://vicentemferrer.github.io/wdd230/chamber/data/members.json'
 
@@ -36,31 +36,19 @@ const generateImage = (company, imageURL) => {
 
 const generateContact = (address, phone) => {
   const contactElement = document.createElement('address')
-  const phoneContent = document.createElement('p')
-  const addressContent = document.createElement('p')
 
-  phoneContent.innerHTML = `<strong>Phone:</strong> ${phone || '---'}`
-  addressContent.innerHTML = `<strong>Address:</strong> ${address}`
-
-  contactElement.appendChild(phoneContent)
-  contactElement.appendChild(addressContent)
+  contactElement.appendChild(itemComponent('phone', phone || '---'))
+  contactElement.appendChild(itemComponent('address', address))
 
   return contactElement
 }
 
 const generateInfo = (membership, category, service) => {
   const infoElement = document.createElement('div')
-  const categoryContent = document.createElement('p')
-  const serviceContent = document.createElement('p')
-  const membershipContent = document.createElement('p')
 
-  categoryContent.innerHTML = `<strong>Category:</strong> ${toTitleCase(category)}`
-  serviceContent.innerHTML = `<strong>Service:</strong> ${toTitleCase(service)}`
-  membershipContent.innerHTML = `<strong>Membership Level:</strong> ${toTitleCase(membership)}`
-
-  infoElement.appendChild(categoryContent)
-  infoElement.appendChild(serviceContent)
-  infoElement.appendChild(membershipContent)
+  infoElement.appendChild(itemComponent('category', category, toTitleCase, true))
+  infoElement.appendChild(itemComponent('service', service, toTitleCase, true))
+  infoElement.appendChild(itemComponent('membership level', membership, toTitleCase, true))
 
   return infoElement
 }
@@ -104,11 +92,4 @@ function displayMembers(members) {
   })
 }
 
-async function getLinks(url) {
-  const response = await fetch(url)
-  const data = await response.json()
-
-  displayMembers(data)
-}
-
-getLinks(membersURL)
+apiFetch(membersURL, displayMembers)
