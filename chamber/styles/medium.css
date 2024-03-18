@@ -119,8 +119,13 @@
         grid-template-columns: auto 1fr 1fr auto;
     }
 
-    .alt.directory main {
+    .alt.directory main,
+    .alt.thanks main {
         grid-template-columns: auto 1fr auto;
+    }
+
+    .alt.thanks main {
+        place-items: center;
     }
 
     #hero {
@@ -148,7 +153,7 @@
         align-items: stretch;
     }
 
-    main section h2 {
+    main section h2:not(.thanks h2) {
         text-align: left;
     }
 

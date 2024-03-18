@@ -1,4 +1,4 @@
-import { toTitleCase, itemComponent, apiFetch } from './helpers.js'
+import { toTitleCase, itemComponent, divGenerator, apiFetch } from './helpers.js'
 
 const membersURL = 'https://vicentemferrer.github.io/wdd230/chamber/data/members.json'
 
@@ -37,8 +37,8 @@ const generateImage = (company, imageURL) => {
 const generateContact = (address, phone) => {
   const contactElement = document.createElement('address')
 
-  contactElement.appendChild(itemComponent('phone', phone || '---'))
   contactElement.appendChild(itemComponent('address', address))
+  contactElement.appendChild(itemComponent('phone', phone || '---'))
 
   return contactElement
 }
@@ -57,7 +57,10 @@ const memberComponent = ({ name, address, phone, socialLinks, imageURL, membersh
   const memberCard = document.createElement('section')
   const memberName = document.createElement('h3')
   const memberArticle = document.createElement('article')
-  const memberSocial = document.createElement('div')
+  const memberSocial = divGenerator('social')
+
+  const presentation = divGenerator('row')
+  const container = divGenerator('container')
 
   const memberLogo = generateImage(name, imageURL)
   const memberContact = generateContact(address, phone)
@@ -69,13 +72,17 @@ const memberComponent = ({ name, address, phone, socialLinks, imageURL, membersh
 
   socialLinksComposed.forEach(link => memberSocial.appendChild(link))
 
-  memberArticle.appendChild(memberName)
-  memberArticle.appendChild(memberContact)
-  memberArticle.appendChild(memberInfo)
+  container.appendChild(memberName)
+  container.appendChild(memberContact)
 
-  memberCard.appendChild(memberLogo)
+  presentation.appendChild(memberLogo)
+  presentation.appendChild(container)
+
+  memberArticle.appendChild(memberInfo)
+  memberArticle.appendChild(memberSocial)
+
+  memberCard.appendChild(presentation)
   memberCard.appendChild(memberArticle)
-  memberCard.appendChild(memberSocial)
 
   memberCard.setAttribute('class', 'card')
 

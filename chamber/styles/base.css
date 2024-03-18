@@ -279,6 +279,10 @@ form .submitBtn:hover {
     border: 1px solid black;
 }
 
+.thanks .card {
+    max-width: 400px;
+}
+
 section:not(footer section),
 form {
     grid-column: 2 / 3;
@@ -304,6 +308,9 @@ section article {
 section h2 {
     text-align: center;
     padding-bottom: .3rem;
+}
+
+section h2:not(.thanks h2) {
     border-bottom: 1px solid black;
 }
 
@@ -528,17 +535,62 @@ form .submitBtn {
     grid-column: 2 / 3;
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: .5rem;
+}
+
+#members article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 100%;
+}
+
+#members .row strong {
+    display: block;
+}
+
+#members p {
+    margin: .25rem 0;
 }
 
 #members section {
     padding: .5rem;
 }
 
+#members .row,
+#members .row .container {
+    gap: .5rem;
+}
+
+#members .row {
+    align-items: flex-start;
+}
+
 #members section img {
-    border-radius: 1rem;
+    border-radius: .5rem;
     object-fit: cover;
+}
+
+#members .social {
+    margin-top: 1rem;
+    font-size: 1.5em;
+
+    display: flex;
+    flex-direction: row;
+
+    border-top: 1px solid black;
+}
+
+#members .social a {
+    flex-grow: 1;
+    text-align: center;
+    padding: 1rem 0 0;
+}
+
+address {
+    font-style: normal;
 }
 
 /* ---------- End of Directory ---------- */
@@ -586,7 +638,6 @@ footer {
 }
 
 .info address {
-    font-style: normal;
     flex-direction: column;
     gap: .25rem
 }
