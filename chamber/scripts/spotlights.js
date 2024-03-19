@@ -73,7 +73,7 @@ const spotlightComponent = ({ name, address, phone, imageURL, service }) => {
 }
 
 function displaySpotlights(members) {
-  const spotlightsSection = document.querySelector('.spotlights')
+  const spotlightsSection = document.querySelector('.spotlights .row')
 
   const spotlights = filterSpotlights(members)
 

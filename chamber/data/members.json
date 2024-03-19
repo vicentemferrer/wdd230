@@ -10,7 +10,7 @@
             }
         ],
         "imageURL": "images/china-thai-logo.webp",
-        "membership": "bronze",
+        "membership": "silver",
         "category": "food",
         "service": "Restaurant"
     },
@@ -40,7 +40,7 @@
             }
         ],
         "imageURL": "images/full-print-logo.webp",
-        "membership": "bronze",
+        "membership": "gold",
         "category": "creative",
         "service": "Graphic Design"
     },
