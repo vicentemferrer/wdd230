@@ -5,12 +5,8 @@ const membersURL = 'https://vicentemferrer.github.io/wdd230/chamber/data/members
 const filterSpotlights = memberList => {
   const byLevel = memberList.filter(({ membership }) => membership === 'gold' || membership === 'silver')
 
-  const limit = randInt(byLevel.length)
-
-  for (let i = 0; i < limit; i++) {
-    if (i === randInt(byLevel.length)) {
-      byLevel.splice(i, 1)
-    }
+  while (byLevel.length > 3) {
+    byLevel.splice(randInt(byLevel.length - 1), 1)
   }
 
   return byLevel
@@ -76,8 +72,6 @@ function displaySpotlights(members) {
   const spotlightsSection = document.querySelector('.spotlights .row')
 
   const spotlights = filterSpotlights(members)
-
-  console.log(spotlights)
 
   spotlights.forEach(spotlight => {
     spotlightsSection.appendChild(spotlightComponent(spotlight))

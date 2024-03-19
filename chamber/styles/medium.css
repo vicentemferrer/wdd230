@@ -54,6 +54,10 @@
         grid-row: 3 / 4;
     }
 
+    .row:has(#currentTemp) {
+        justify-content: space-evenly;
+    }
+
     footer {
         grid-row: 3 / 4;
         font-size: 1.5ch;
@@ -157,17 +161,29 @@
         text-align: left;
     }
 
+    .row:has(#currentTemp) {
+        justify-content: space-between;
+    }
+
     .spotlights {
         grid-column: 2 / 4;
         flex-direction: row;
+        width: 100%;
         padding: 0;
         gap: 1rem;
         background-color: transparent;
         border: none;
     }
 
+    .spotlights>.row {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+    }
+
     .spotlights article {
         background-color: lightgray;
+        max-width: 33.33%;
     }
 
     .spotlights h2 {

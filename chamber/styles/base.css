@@ -381,10 +381,14 @@ section a:hover,
     gap: .5rem;
     background-color: lightgrey;
     border: 1px solid black;
+    width: 100%;
 }
 
 .spotlights>.row {
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 1rem;
+    width: 90%;
 }
 
 .spotlights article {
@@ -392,7 +396,6 @@ section a:hover,
     border-radius: .25rem;
     border: 1px solid black;
     padding: 1rem;
-    max-width: 20rem;
 }
 
 .spotlights img {
@@ -405,6 +408,10 @@ section a:hover,
 .spotlights article .row {
     gap: .5rem;
     justify-content: flex-start;
+}
+
+.spotlights .social {
+    font-size: 1.5rem;
 }
 
 /* ---------- End of Section ---------- */
