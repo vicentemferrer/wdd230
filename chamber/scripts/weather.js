@@ -97,7 +97,7 @@ function displayForecast({ list }) {
   const weatherInfo = document.querySelector('#weather article')
   const row = divGenerator('row')
 
-  forecastDepurer(list).forEach(({ main: { temp }, weather: [firstEvent, ..._], dt_txt }) => {
+  forecastDepurer(list).splice(0, 3).forEach(({ main: { temp }, weather: [firstEvent, ..._], dt_txt }) => {
     const weatherEventComposed = forecastItemComponent(firstEvent, temp, new Date(dt_txt).getDay())
 
     row.appendChild(weatherEventComposed)

@@ -1,4 +1,4 @@
-import { toTitleCase, itemComponent, divGenerator, apiFetch } from './helpers.js'
+import { toTitleCase, itemComponent, generateImage, divGenerator, apiFetch } from './helpers.js'
 
 const membersURL = 'https://vicentemferrer.github.io/wdd230/chamber/data/members.json'
 
@@ -18,20 +18,9 @@ const socialLinkComponent = ({ url, type }) => {
   linkElement.setAttribute('target', '_blank')
 
   linkElement.appendChild(socialIconElement(type, type === 'website'))
+  linkElement.innerHTML += ` ${toTitleCase(type)}`
 
   return linkElement
-}
-
-const generateImage = (company, imageURL) => {
-  const img = document.createElement('img')
-
-  img.setAttribute('src', imageURL)
-  img.setAttribute('alt', `${company} Logo`)
-  img.setAttribute('width', 150)
-  img.setAttribute('height', 150)
-  img.setAttribute('loading', 'lazy')
-
-  return img
 }
 
 const generateContact = (address, phone) => {

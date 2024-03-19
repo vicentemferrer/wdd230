@@ -7,6 +7,8 @@ const diffCalc = date => {
   return (Date.now() - date) / msToDays
 }
 
+const randInt = limit => Math.floor(Math.random() * limit)
+
 const getWeekday = index => {
   const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 
@@ -21,6 +23,18 @@ const itemComponent = (textItem, content, fn = () => { }, isFnNeeded = false, co
   paragraph.innerHTML = `<strong>${toTitleCase(textItem)}:</strong> ${itemContent}`
 
   return paragraph
+}
+
+const generateImage = (company, imageURL) => {
+  const img = document.createElement('img')
+
+  img.setAttribute('src', imageURL)
+  img.setAttribute('alt', `${company} Logo`)
+  img.setAttribute('width', 150)
+  img.setAttribute('height', 150)
+  img.setAttribute('loading', 'lazy')
+
+  return img
 }
 
 const divGenerator = (...classList) => {
@@ -48,4 +62,4 @@ async function apiFetch(url, fn) {
   }
 }
 
-export { toTitleCase, urlBuilder, diffCalc, getWeekday, divGenerator, itemComponent, apiFetch }
+export { toTitleCase, urlBuilder, diffCalc, randInt, getWeekday, divGenerator, itemComponent, generateImage, apiFetch }

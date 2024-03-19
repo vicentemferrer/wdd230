@@ -161,14 +161,13 @@
         grid-column: 2 / 4;
         flex-direction: row;
         padding: 0;
-        gap: .25rem;
+        gap: 1rem;
         background-color: transparent;
         border: none;
     }
 
     .spotlights article {
         background-color: lightgray;
-        width: unset;
     }
 
     .spotlights h2 {
