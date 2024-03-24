@@ -586,7 +586,7 @@ form .submitBtn {
 
 #members.list .card {
     border-radius: 0;
-    background-color: transparent;
+    background-color: white;
     border: 0;
     border-inline: 1px solid black;
 }
