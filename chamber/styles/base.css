@@ -557,6 +557,18 @@ form .submitBtn {
 
 /* ---------- Directory ---------- */
 
+.controls {
+    grid-column: 1 / 4;
+
+    display: grid;
+    place-items: center;
+}
+
+.controls button {
+    font-size: 1.5rem;
+    padding: .5rem;
+}
+
 #members {
     grid-column: 2 / 3;
 
@@ -565,38 +577,86 @@ form .submitBtn {
     gap: .5rem;
 }
 
-#members article {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    height: 100%;
+#members.list {
+    grid-template-columns: auto 1fr auto;
+    gap: 0;
+    width: minmax(100%, 40rem);
+    justify-self: center;
 }
 
-#members .row strong {
-    display: block;
+#members.list .card {
+    border-radius: 0;
+    background-color: transparent;
+    border: 0;
+    border-inline: 1px solid black;
 }
 
-#members p {
-    margin: .25rem 0;
+#members.list .card:first-child {
+    border-top: 1px solid black;
+    border-radius: .25rem .25rem 0 0;
+}
+
+#members.list .card:nth-child(odd) {
+    background-color: lightgray;
+}
+
+#members.list .card:last-child {
+    border-bottom: 1px solid black;
+    border-radius: 0 0 .25rem .25rem;
 }
 
 #members section {
     padding: .5rem;
 }
 
-#members .row,
-#members .row .container {
-    gap: .5rem;
+#members.list section {
+    grid-column: 2 / 3;
+    flex-direction: row;
 }
 
 #members .row {
-    align-items: flex-start;
+    padding-top: .5rem;
 }
 
-#members section img {
+#members img {
     border-radius: .5rem;
     object-fit: cover;
+}
+
+#members article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 100%;
+    padding-top: 1rem;
+}
+
+#members.list article {
+    width: 100%;
+    padding: 1rem;
+}
+
+#members p {
+    margin: .25rem 0;
+}
+
+#members.list #name {
+    display: block;
+}
+
+#members strong {
+    display: block;
+}
+
+#members.list strong {
+    display: inline;
+}
+
+#members.list .row,
+#members.list span,
+#members #name {
+    display: none;
 }
 
 .social {

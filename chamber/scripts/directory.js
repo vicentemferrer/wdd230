@@ -1,5 +1,9 @@
 import { toTitleCase, itemComponent, generateImage, divGenerator, apiFetch } from './helpers.js'
 
+const membersContainer = document.getElementById('members')
+const styleToggler = document.querySelector('.controls button')
+const togglerIcon = document.querySelector('.controls button i')
+
 const membersURL = 'https://vicentemferrer.github.io/wdd230/chamber/data/members.json'
 
 const socialIconElement = (type, isWebsite = false) => {
@@ -18,7 +22,7 @@ const socialLinkComponent = ({ url, type }) => {
   linkElement.setAttribute('target', '_blank')
 
   linkElement.appendChild(socialIconElement(type, type === 'website'))
-  linkElement.innerHTML += ` ${toTitleCase(type)}`
+  linkElement.innerHTML += `<span> ${toTitleCase(type)}</span>`
 
   return linkElement
 }
@@ -26,48 +30,35 @@ const socialLinkComponent = ({ url, type }) => {
 const generateContact = (address, phone) => {
   const contactElement = document.createElement('address')
 
+  if (phone) contactElement.appendChild(itemComponent('phone', phone))
   contactElement.appendChild(itemComponent('address', address))
-  contactElement.appendChild(itemComponent('phone', phone || '---'))
 
   return contactElement
 }
 
-const generateInfo = (membership, category, service) => {
-  const infoElement = document.createElement('div')
-
-  infoElement.appendChild(itemComponent('category', category, toTitleCase, true))
-  infoElement.appendChild(itemComponent('service', service, toTitleCase, true))
-  infoElement.appendChild(itemComponent('membership level', membership, toTitleCase, true))
-
-  return infoElement
-}
-
-const memberComponent = ({ name, address, phone, socialLinks, imageURL, membership, category, service }) => {
+const memberComponent = ({ name, address, phone, socialLinks, imageURL }) => {
   const memberCard = document.createElement('section')
   const memberName = document.createElement('h3')
   const memberArticle = document.createElement('article')
   const memberSocial = divGenerator('social')
 
   const presentation = divGenerator('row')
-  const container = divGenerator('container')
 
   const memberLogo = generateImage(name, imageURL)
   const memberContact = generateContact(address, phone)
-  const memberInfo = generateInfo(membership, category, service)
 
   memberName.textContent = name
+
+  memberName.setAttribute('id', 'name')
 
   const socialLinksComposed = socialLinks.map(link => socialLinkComponent(link))
 
   socialLinksComposed.forEach(link => memberSocial.appendChild(link))
 
-  container.appendChild(memberName)
-  container.appendChild(memberContact)
-
   presentation.appendChild(memberLogo)
-  presentation.appendChild(container)
 
-  memberArticle.appendChild(memberInfo)
+  memberArticle.appendChild(memberName)
+  memberArticle.appendChild(memberContact)
   memberArticle.appendChild(memberSocial)
 
   memberCard.appendChild(presentation)
@@ -79,8 +70,6 @@ const memberComponent = ({ name, address, phone, socialLinks, imageURL, membersh
 }
 
 function displayMembers(members) {
-  const membersContainer = document.getElementById('members')
-
   members.forEach(member => {
     const memberElement = memberComponent(member)
 
@@ -89,3 +78,15 @@ function displayMembers(members) {
 }
 
 apiFetch(membersURL, displayMembers)
+
+styleToggler.addEventListener('click', () => {
+  membersContainer.classList.toggle('list')
+
+  if (togglerIcon.classList.contains('fa-list')) {
+    togglerIcon.classList.remove('fa-list')
+    togglerIcon.classList.add('fa-border-all')
+  } else {
+    togglerIcon.classList.remove('fa-border-all')
+    togglerIcon.classList.add('fa-list')
+  }
+})

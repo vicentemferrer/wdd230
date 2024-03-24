@@ -194,6 +194,39 @@
         display: block;
     }
 
+    #members.list article {
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    #members.list #name {
+        flex-grow: 1;
+        width: 10ch;
+    }
+
+    #members.list strong {
+        display: none;
+    }
+
+    .list address {
+        flex-grow: 1;
+    }
+
+    .list .social {
+        flex-grow: 1;
+        margin: 0;
+        border: 0;
+        justify-content: flex-end;
+        gap: 2rem;
+    }
+
+    .list .social a {
+        flex-grow: 0;
+        padding: 0;
+        font-size: 1.25rem;
+    }
+
     footer {
         font-size: unset;
         grid-template-columns: auto repeat(2, 1fr) 200px repeat(2, 1fr) auto;

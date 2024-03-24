@@ -6,7 +6,7 @@ const filterSpotlights = memberList => {
   const byLevel = memberList.filter(({ membership }) => membership === 'gold' || membership === 'silver')
 
   while (byLevel.length > 3) {
-    byLevel.splice(randInt(byLevel.length - 1), 1)
+    byLevel.splice(randInt(byLevel.length), 1)
   }
 
   return byLevel
