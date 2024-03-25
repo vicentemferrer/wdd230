@@ -1,0 +1,238 @@
+:root {
+    /* Palette */
+    --primary-color: #1d7fbe;
+    --secondary-color: #fefefe;
+    --accent1-color: #f9bf90;
+    --accent2-color: #0074c2;
+    --accent3-color: #f24a13;
+
+    /* Fonts */
+    --super-duper-font: "Syne Mono";
+    --heading-font: "Arizonia", sans-serif;
+    --paragraph-font: "Bona Nova", serif;
+    --nav-font: "Kufam";
+
+    /* Text and elements colors */
+    --headline-color-on-white: var(--accent3-color);
+    --headline-color-on-color: var(--secondary-color);
+    --paragraph-color-on-white: black;
+    --paragraph-color-on-color: white;
+    --paragraph-background-color: var(--primary-color);
+
+    --nav-link-color: var(--secondary-color);
+    --nav-background-color: var(--primary-color);
+    --nav-hover-link-color: var(--accent3-color);
+    --nav-hover-background-color: var(--secondary-color);
+}
+
+body {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 4em;
+    font-size: 18px;
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 300px;
+}
+
+.syne-mono {
+    font-family: "Syne Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.kufam {
+    font-family: "Kufam", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.bona-nova {
+    font-family: "Bona Nova", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.arizonia {
+    font-family: "Arizonia", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--headline-color-on-white);
+}
+
+h2 {
+    text-align: center;
+}
+
+hr {
+    height: 3px;
+    margin: 35px 0;
+    background: var(--accent1-color);
+}
+
+header {
+    padding: 1em;
+    text-align: center;
+    color: var(--headline-color-on-color);
+    background-color: var(--paragraph-background-color);
+}
+
+header>h1,
+header>h2 {
+    color: var(--headline-color-on-color);
+}
+
+p {
+    font-family: var(--paragraph-font);
+    color: var(--paragraph-color-on-white);
+    padding: 1em;
+}
+
+.colors {
+    width: 100%;
+    min-width: 350px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.colors th {
+    background-color: #999;
+}
+
+.colors td {
+    width: 20%;
+    height: 3em;
+}
+
+.primary {
+    background-color: var(--primary-color);
+}
+
+.secondary {
+    background-color: var(--secondary-color);
+}
+
+.accent1 {
+    background-color: var(--accent1-color);
+}
+
+.accent2 {
+    background-color: var(--accent2-color);
+}
+
+.accent3 {
+    background-color: var(--accent3-color);
+}
+
+p.colored {
+    background-color: var(--paragraph-background-color);
+    color: var(--paragraph-color-on-color);
+}
+
+nav {
+    background-color: var(--nav-background-color);
+    line-height: 3em;
+    text-align: center;
+    font-size: 1.2em;
+
+    list-style-type: none;
+    display: flex;
+    font-family: var(--nav-font);
+    justify-content: flex-end;
+
+    padding-right: 1rem;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+nav a:link,
+nav a:visited {
+    color: var(--nav-link-color);
+}
+
+nav a:hover {
+    color: var(--nav-hover-link-color);
+    text-shadow: 1px 1px 1px var(--nav-hover-background-color);
+    text-decoration: underline;
+    text-underline-offset: .33rem;
+}
+
+.sitemap {
+    display: grid;
+    justify-content: center;
+
+    grid-template-columns: repeat(8, 10%);
+    grid-template-rows: 3em 1.5em 1.5em 3em;
+    grid-template-areas: ". . . home home . . ."
+        ". . . . top . . ."
+        ". left left left center right right ."
+        "page2 page2 . page3 page3 . page4 page4";
+}
+
+.sitemap>div {
+    text-align: center;
+}
+
+.sm-home {
+    grid-area: home;
+    background-color: #ccc;
+    line-height: 3em;
+}
+
+.sm-page2 {
+    grid-area: page2;
+    background-color: #ccc;
+    line-height: 3em;
+}
+
+.sm-page3 {
+    grid-area: page3;
+    background-color: #ccc;
+    line-height: 3em;
+}
+
+.sm-page4 {
+    grid-area: page4;
+    background-color: #ccc;
+    line-height: 3em;
+}
+
+.top {
+    grid-area: top;
+    border-left: 1px solid;
+}
+
+.left {
+    grid-area: left;
+    border-top: 1px solid;
+    border-left: 1px solid;
+}
+
+.right {
+    grid-area: right;
+    border-top: 1px solid;
+    border-right: 1px solid;
+}
+
+.center {
+    grid-area: center;
+    border-top: 1px solid;
+    border-left: 1px solid;
+}
