@@ -160,6 +160,7 @@ nav {
 nav a {
     text-decoration: none;
     text-transform: uppercase;
+    text-shadow: 1px 1px 1px var(--nav-hover-link-color);
 }
 
 nav a:link,
