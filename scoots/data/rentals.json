@@ -29,7 +29,8 @@
                     "full": 35
                 }
             },
-            "maxPersons": 1
+            "maxPersons": 1,
+            "imageURL": "images/honda-metropolitan.webp"
         },
         {
             "type": "scooter",
@@ -48,7 +49,8 @@
                     "full": 45
                 }
             },
-            "maxPersons": 2
+            "maxPersons": 2,
+            "imageURL": "images/honda-dio.webp"
         },
         {
             "type": "scooter",
@@ -67,7 +69,8 @@
                     "full": 55
                 }
             },
-            "maxPersons": 2
+            "maxPersons": 2,
+            "imageURL": "images/honda-pcx-150.webp"
         },
         {
             "type": "atv",
@@ -84,7 +87,8 @@
                     "full": 80
                 }
             },
-            "maxPersons": 4
+            "maxPersons": 4,
+            "imageURL": "images/honda-pioneer-1000.webp"
         },
         {
             "type": "jeep",
@@ -105,7 +109,8 @@
                     "full": 125
                 }
             },
-            "maxPersons": 5
+            "maxPersons": 5,
+            "imageURL": "images/jeep-4.webp"
         },
         {
             "type": "jeep",
@@ -126,7 +131,8 @@
                     "full": 90
                 }
             },
-            "maxPersons": 4
+            "maxPersons": 4,
+            "imageURL": "images/jeep-2.webp"
         }
     ]
 }
