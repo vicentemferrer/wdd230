@@ -1,4 +1,8 @@
 @media screen and (1024px < width) {
+    .logo img {
+        width: calc(500px / 5);
+    }
+
     nav {
         width: 40%;
     }
@@ -15,7 +19,7 @@
         font-size: 3ch;
     }
 
-    section h2 {
+    main h2 {
         font-size: 4ch;
     }
 }

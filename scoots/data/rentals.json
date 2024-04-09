@@ -1,138 +1,124 @@
-{
-    "agreements": [
-        "A $50 security deposit is required to confirm reservations.",
-        "A valid drivers license is required in hand at the time of rental.",
-        "No one under the age of 12 years of age are allowed to ride on the scooters.",
-        "Fuel charge is not included.",
-        "Unlimited mileage.",
-        "Liability insurance is included.",
-        "Damage insurance is available for purchase.",
-        "Free delivery to Cozumel hotels or Airbnbs for 2+ day rentals.",
-        "Payment via Google Pay, Apple Pay, cash, credit card, debit card, or venmo.",
-        "Rentals may be returned to either physical location."
-    ],
-    "rentals": [
-        {
-            "type": "scooter",
-            "brand": "Honda",
-            "model": "Metropolitan",
-            "features": {
-                "cc": 49
-            },
-            "pricing": {
-                "reservation": {
-                    "half": 20,
-                    "full": 30
-                },
-                "walkIn": {
-                    "half": 25,
-                    "full": 35
-                }
-            },
-            "maxPersons": 1,
-            "imageURL": "images/honda-metropolitan.webp"
+[
+    {
+        "type": "scooter",
+        "brand": "Honda",
+        "model": "Metropolitan",
+        "features": {
+            "cc": 49
         },
-        {
-            "type": "scooter",
-            "brand": "Honda",
-            "model": "Dio",
-            "features": {
-                "cc": 110
+        "pricing": {
+            "reservation": {
+                "half": 20,
+                "full": 30
             },
-            "pricing": {
-                "reservation": {
-                    "half": 30,
-                    "full": 40
-                },
-                "walkIn": {
-                    "half": 35,
-                    "full": 45
-                }
-            },
-            "maxPersons": 2,
-            "imageURL": "images/honda-dio.webp"
+            "walkIn": {
+                "half": 25,
+                "full": 35
+            }
         },
-        {
-            "type": "scooter",
-            "brand": "Honda",
-            "model": "PCX150",
-            "features": {
-                "cc": 149
-            },
-            "pricing": {
-                "reservation": {
-                    "half": 40,
-                    "full": 50
-                },
-                "walkIn": {
-                    "half": 45,
-                    "full": 55
-                }
-            },
-            "maxPersons": 2,
-            "imageURL": "images/honda-pcx-150.webp"
+        "maxPersons": 1,
+        "imageURL": "images/honda-metropolitan.webp"
+    },
+    {
+        "type": "scooter",
+        "brand": "Honda",
+        "model": "Dio",
+        "features": {
+            "cc": 110
         },
-        {
-            "type": "atv",
-            "brand": "Honda",
-            "model": "Pioneer 1000",
-            "features": {},
-            "pricing": {
-                "reservation": {
-                    "half": 50,
-                    "full": 70
-                },
-                "walkIn": {
-                    "half": 60,
-                    "full": 80
-                }
+        "pricing": {
+            "reservation": {
+                "half": 30,
+                "full": 40
             },
-            "maxPersons": 4,
-            "imageURL": "images/honda-pioneer-1000.webp"
+            "walkIn": {
+                "half": 35,
+                "full": 45
+            }
         },
-        {
-            "type": "jeep",
-            "brand": "Jeep",
-            "model": "Wrangler",
-            "features": {
-                "doors": 4,
-                "ac": true,
-                "manual": true
-            },
-            "pricing": {
-                "reservation": {
-                    "half": 70,
-                    "full": 100
-                },
-                "walkIn": {
-                    "half": 85,
-                    "full": 125
-                }
-            },
-            "maxPersons": 5,
-            "imageURL": "images/jeep-4.webp"
+        "maxPersons": 2,
+        "imageURL": "images/honda-dio.webp"
+    },
+    {
+        "type": "scooter",
+        "brand": "Honda",
+        "model": "PCX150",
+        "features": {
+            "cc": 149
         },
-        {
-            "type": "jeep",
-            "brand": "Jeep",
-            "model": "Wrangler",
-            "features": {
-                "doors": 2,
-                "ac": false,
-                "manual": true
+        "pricing": {
+            "reservation": {
+                "half": 40,
+                "full": 50
             },
-            "pricing": {
-                "reservation": {
-                    "half": 60,
-                    "full": 85
-                },
-                "walkIn": {
-                    "half": 70,
-                    "full": 90
-                }
+            "walkIn": {
+                "half": 45,
+                "full": 55
+            }
+        },
+        "maxPersons": 2,
+        "imageURL": "images/honda-pcx-150.webp"
+    },
+    {
+        "type": "atv",
+        "brand": "Honda",
+        "model": "Pioneer 1000",
+        "features": {},
+        "pricing": {
+            "reservation": {
+                "half": 50,
+                "full": 70
             },
-            "maxPersons": 4,
-            "imageURL": "images/jeep-2.webp"
-        }
-    ]
-}
+            "walkIn": {
+                "half": 60,
+                "full": 80
+            }
+        },
+        "maxPersons": 4,
+        "imageURL": "images/honda-pioneer-1000.webp"
+    },
+    {
+        "type": "jeep",
+        "brand": "Jeep",
+        "model": "Wrangler",
+        "features": {
+            "doors": 4,
+            "ac": true,
+            "manual": true
+        },
+        "pricing": {
+            "reservation": {
+                "half": 70,
+                "full": 100
+            },
+            "walkIn": {
+                "half": 85,
+                "full": 125
+            }
+        },
+        "maxPersons": 5,
+        "imageURL": "images/jeep-4.webp"
+    },
+    {
+        "type": "jeep",
+        "brand": "Jeep",
+        "model": "Wrangler",
+        "features": {
+            "doors": 2,
+            "ac": false,
+            "manual": true
+        },
+        "pricing": {
+            "reservation": {
+                "half": 60,
+                "full": 85
+            },
+            "walkIn": {
+                "half": 70,
+                "full": 90
+            }
+        },
+        "maxPersons": 4,
+        "imageURL": "images/jeep-2.webp"
+    }
+]

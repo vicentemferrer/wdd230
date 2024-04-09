@@ -54,6 +54,8 @@ body {
     display: grid;
     grid-template-columns: auto 1fr auto;
     font-size: 16px;
+
+    overflow-x: hidden;
 }
 
 header,
@@ -81,6 +83,15 @@ header {
 
 .logo img {
     width: calc(500px / 6);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-align: center;
 }
 
 nav {
@@ -225,8 +236,14 @@ main {
     border-color: black;
 }
 
-section {
+main>* {
     grid-column: 2 / 3;
+
+    width: 100%;
+}
+
+main>h2 {
+    padding-top: 1rem
 }
 
 main section {
@@ -240,6 +257,45 @@ main section {
     padding: 1rem 0;
 }
 
+#pricing table {
+    width: 70%;
+    font-size: 8px;
+    box-shadow: 3px 3px black;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    text-align: center;
+    padding: .15em .25em;
+    border: 2px solid black;
+}
+
+thead {
+    background-color: var(--accent1-color);
+}
+
+.detail {
+    background-color: var(--accent1-color);
+}
+
+.reservation {
+    background-color: greenyellow;
+}
+
+.walkIn {
+
+    background-color: yellow;
+}
+
+#rentals {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+    justify-items: center;
+    align-items: start;
+    gap: 1rem;
+}
+
 .carousel {
     width: 100vw;
     display: flex;
@@ -251,12 +307,13 @@ main section {
     padding-bottom: 1rem;
 }
 
-.carousel article {
+.card {
     width: fit-content;
+    height: 100%;
 
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-items: center;
 
     gap: 1rem;
@@ -269,9 +326,23 @@ main section {
     background-color: var(--accent1-color);
 }
 
-.carousel h3 {
+.card h3,
+.card p {
     width: 15ch;
-    text-align: center;
+}
+
+.rent .card p {
+    text-align: left;
+    align-self: flex-start;
+}
+
+.card ul {
+    margin-top: .5rem;
+    padding-left: 2rem;
+}
+
+::marker {
+    content: "- ";
 }
 
 .weather article {
@@ -299,8 +370,90 @@ main section {
 }
 
 .weather h4 {
-    text-align: center;
     width: 10ch;
+}
+
+form {
+    padding: .5rem;
+}
+
+form>* {
+    max-width: 20rem;
+}
+
+form label,
+label.top input,
+label.top textarea {
+    display: block;
+}
+
+form label.top,
+form div {
+    padding-top: 1rem;
+    color: black;
+    font-size: .8rem;
+    font-weight: bold;
+}
+
+form label.top input,
+form label.top textarea {
+    appearance: none;
+    -webkit-appearance: none;
+    font-size: 1rem;
+    padding: .75rem;
+    color: #000;
+    width: 100%;
+    background-color: white;
+}
+
+form label.top input {
+    border: none;
+    border-bottom: 2px solid #0005;
+}
+
+form label.top textarea {
+    border-radius: .2rem;
+    border: 2px solid #0005;
+}
+
+form label.top input:focus,
+form label.top textarea:focus {
+    outline: none;
+}
+
+form label.top input:focus {
+    border-bottom: 2px solid #000a;
+}
+
+form label.top textarea:focus {
+    border: 2px solid #000a;
+}
+
+form label.top input:required {
+    border-left: 3px solid red;
+}
+
+form label.top input:required:valid {
+    border-left: 3px solid green;
+}
+
+form .sbs,
+form .submitBtn {
+    cursor: pointer;
+}
+
+form label.sbs {
+    padding: .75rem 0;
+    color: #000;
+}
+
+form .submitBtn {
+    border: none;
+    background-color: var(--accent3-color);
+    color: white;
+    border-radius: .15rem;
+    padding: .75rem 1rem;
+    margin-top: 1rem;
 }
 
 footer {

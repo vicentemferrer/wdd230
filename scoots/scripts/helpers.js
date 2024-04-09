@@ -1,4 +1,4 @@
-const toTitleCase = text => text.split(' ').filter(word => word !== '').map(word => word[0].toUpperCase() + word.slice(1)).join(' ')
+const toTitleCase = (text, mayusAll = false) => mayusAll ? text.toUpperCase() : text.split(' ').filter(word => word !== '').map(word => word[0].toUpperCase() + word.slice(1)).join(' ')
 
 const urlBuilder = (base, options) => `${base}?${Object.entries(options).map(option => option.join('=')).join('&')}`
 
@@ -7,16 +7,10 @@ const diffCalc = date => {
   return (Date.now() - date) / msToDays
 }
 
-const getWeekday = index => {
-  const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
-
-  return weekdays[index]
-}
-
-const itemComponent = (textItem, content, fn = () => { }, isFnNeeded = false, contentArr = [], isArrayNeeded = false) => {
+const itemComponent = (textItem, content, fn = () => { }, isFnNeeded = false) => {
   const paragraph = document.createElement('p')
 
-  const itemContent = isFnNeeded ? isArrayNeeded ? fn(...contentArr) : fn(content) : content
+  const itemContent = isFnNeeded ? Array.isArray(content) ? fn(...content) : fn(content) : content
 
   paragraph.innerHTML = `<strong>${toTitleCase(textItem)}:</strong> ${itemContent}`
 
@@ -68,4 +62,4 @@ async function apiFetch(url, fn) {
   }
 }
 
-export { toTitleCase, urlBuilder, diffCalc, getWeekday, divGenerator, itemComponent, generateTextElement, generateImage, apiFetch }
+export { toTitleCase, urlBuilder, diffCalc, divGenerator, itemComponent, generateTextElement, generateImage, apiFetch }

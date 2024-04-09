@@ -40,7 +40,64 @@
         </nav>
     </header>
     <main>
+        <section>
+            <form action="/submit-rental-details" method="post">
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required><br><br>
 
+                <label for="period">Period:</label>
+                <input type="text" id="period" name="period" placeholder="e.g., 5 days" required><br><br>
+
+                <label for="rental-type">Rental Type:</label>
+                <select id="rental-type" name="rental_type" required>
+                    <option value="car">Car</option>
+                    <option value="bike">Bike</option>
+                    <option value="scooter">Scooter</option>
+                    <!-- Add more rental types as needed -->
+                </select><br><br>
+
+                <label for="number">Number of Rentals:</label>
+                <input type="number" id="number" name="number" min="1" required><br><br>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required><br><br>
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="state-country">Home State/Country:</label>
+                <input type="text" id="state-country" name="state_country" required><br><br>
+
+                <label for="cruise-line">Cruise Line (if applicable):</label>
+                <input type="text" id="cruise-line" name="cruise_line"><br><br>
+
+                <label for="accommodations">Special Accommodations/Comments:</label>
+                <textarea id="accommodations" name="accommodations"
+                    placeholder="Include any drop-off requests or other needs here."></textarea><br><br>
+
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+        <section class="card" id="agreements">
+            <h2>Rental Agreements</h2>
+            <article>
+                <ul>
+                    <li>A $50 security deposit is required to confirm reservations.</li>
+                    <li>A valid drivers license is required in hand at the time of rental.</li>
+                    <li>No one under the age of 12 years of age are allowed to ride on the scooters.</li>
+                    <li>Fuel charge is not included.</li>
+                    <li>Unlimited mileage.</li>
+                    <li>Liability insurance is included.</li>
+                    <li>Damage insurance is available for purchase.</li>
+                    <li>Free delivery to Cozumel hotels or Airbnbs for 2+ day rentals.</li>
+                    <li>Payment via Google Pay, Apple Pay, cash, credit card, debit card, or venmo.</li>
+                    <li>Rentals may be returned to either physical location.</li>
+                </ul>
+            </article>
+        </section>
     </main>
     <footer>
         <section class="info">
@@ -68,6 +125,7 @@
     </footer>
 
     <script type="module" src="../scripts/navigation.js"></script>
+    <script type="module" src="../scripts/reservations.js"></script>
     <script type="module" src="../scripts/getdates.js"></script>
     <script src="https://kit.fontawesome.com/466a0b8fee.js" crossorigin="anonymous" type="module"></script>
 </body>
