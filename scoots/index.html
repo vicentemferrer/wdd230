@@ -1,19 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scoots | Home</title>
+    <meta name="description" content="WDD 230 - Web Frontend Development, Vicente Ferrer, Scoots Final Project">
+    <meta name="author" content="Vicente Ferrer">
+
+    <meta property="og:title" content="Scoots - Scoot Into Adventure!">
+    <meta property="og:type" content="website">
+    <meta property="og:image"
+        content="https://www.goatsontheroad.com/wp-content/uploads/2018/07/cozumel-island-san-miguel-capital-city-1.jpg">
+    <meta property="og:url" content="https://vicentemferrer.github.io/wdd230/scoots/">
+
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/normalize.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arizonia&family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=Kufam:ital,wght@0,400..900;1,400..900&family=Syne+Mono&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/base.css" media="all">
+    <link rel="stylesheet" href="styles/medium.css" media="(min-width: 500px)">
+    <link rel="stylesheet" href="styles/large.css" media="(min-width: 1024px)">
+</head>
+
+<body class="syne-mono">
+    <header>
+        <a href="index.html">
+            <figure class="logo">
+                <img src="images/logo.webp" alt="Scoots logo" loading="lazy">
+            </figure>
+        </a>
+        <nav class="kufam">
+            <a href="#" id="menu"></a>
+            <div class="kufam" id="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="rentals/">Rentals</a>
+                <a href="reservations/">Reservations</a>
+                <a href="contact/">Contact</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="hero">
+            <picture>
+                <source media="(min-width: 1024px)" srcset="images/hero-large.webp">
+                <source media="(min-width: 768px)" srcset="images/hero-medium.webp">
+                <img src="images/hero-small.webp" alt="people working">
+            </picture>
+            <div id="bg"></div>
+            <div id="content">
+                <h2 class="syne-mono">Scoot Into Adventure!</h2>
+                <a href="#" class="kufam book">Book now</a>
+            </div>
+        </div>
+        <section class="rentals">
+            <h2 class="headline-in-white">Rentals</h2>
+            <div class="carousel"></div>
+        </section>
+        <section class="weather">
+            <h2 class="headline-in-white">Weather in Cozumel</h2>
+            <article></article>
+        </section>
+    </main>
+    <footer>
+        <section class="info">
+            <figure>
+                <img src="images/logo.webp" alt="Scoots logo" loading="lazy">
+                <figcaption>
+                    <address>
+                        <a href="mailto:contact@scoots.mx">contact@scoots.mx</a>
+                        <a href="tel:+529841234567">+52 984 123-4567</a>
+                        <a href="#" target="_blank">📍 Location Map</a>
+                    </address>
+                </figcaption>
+            </figure>
+        </section>
+        <section class="social">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </section>
+        <section class="kufam project">
+            <p><span data-id="year"><i class="fa-regular fa-copyright"></i> </span> Scoots</p>
+            <p>Vicente Ferrer | WDD 230 Final Project</p>
+            <p id="lastModified"></p>
+        </section>
+    </footer>
+
+    <script type="module" src="scripts/navigation.js"></script>
+    <script type="module" src="scripts/rentalpreview.js"></script>
+    <script type="module" src="scripts/weather.js"></script>
+    <script type="module" src="scripts/getdates.js"></script>
+    <script src="https://kit.fontawesome.com/466a0b8fee.js" crossorigin="anonymous" type="module"></script>
+</body>
+
+</html>
+
 <!-- 
-    - A call to action to make a rental reservation.
-
-    - Readily available navigation and contact information.
-
-    - Summary information about all the types of rentals.
-
-    - Social media links (a general link is OK)
-
-    - Weather information from the free version of openweathermap.org. Here is the minimum information to include on the page:
-        ✔️ The current temperature        
-        ✔️ The current humidity
-        ✔️ The next day's forecasted temperature at 15:00 (3:00pm).
-        ✔️ All the weather data points provided including the main (which is the title, e.g., "Clouds"), the description, and the associated weather icon.
-
-    - There may likely only be one data point under weather but your code should display any and all if provided by the API.
-
     - Include a closeable message at the very top of the page that provides the high temperature temp-max for the current day.
  -->

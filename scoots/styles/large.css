@@ -1,0 +1,21 @@
+@media screen and (1024px < width) {
+    nav {
+        width: 40%;
+    }
+
+    .hero #content {
+        row-gap: 2rem;
+    }
+
+    .hero #content h2 {
+        font-size: 7ch;
+    }
+
+    .hero #content .book {
+        font-size: 3ch;
+    }
+
+    section h2 {
+        font-size: 4ch;
+    }
+}

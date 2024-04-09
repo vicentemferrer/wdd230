@@ -1,0 +1,365 @@
+:root {
+    /* Palette */
+    --primary-color: #1d7fbe;
+    --secondary-color: #fefefe;
+    --accent1-color: #f9bf90;
+    --accent2-color: #0074c2;
+    --accent3-color: #f24a13;
+
+    --headline-color-on-white: var(--accent3-color);
+    --headline-color-on-color: var(--secondary-color);
+    --paragraph-color-on-white: black;
+    --paragraph-color-on-color: white;
+    --paragraph-background-color: var(--primary-color);
+
+    --headline-color-on-white: var(--accent3-color);
+    --headline-color-on-color: var(--secondary-color);
+    --paragraph-color-on-white: black;
+    --paragraph-color-on-color: white;
+    --paragraph-background-color: var(--primary-color);
+
+    --nav-link-color: var(--secondary-color);
+    --nav-background-color: var(--primary-color);
+    --nav-hover-link-color: var(--accent3-color);
+    --nav-hover-background-color: var(--secondary-color);
+}
+
+.syne-mono {
+    font-family: "Syne Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.kufam {
+    font-family: "Kufam", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.headline-in-white {
+    color: var(--headline-color-on-white);
+    text-shadow: 1px 1px black;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    font-size: 16px;
+}
+
+header,
+main,
+footer {
+    width: 100%;
+}
+
+header,
+footer {
+    grid-column: 1 / 4;
+
+    color: var(--paragraph-color-on-color);
+    background-color: var(--paragraph-background-color);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    grid-row: 1 / 2;
+
+}
+
+.logo img {
+    width: calc(500px / 6);
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-inline: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--nav-link-color);
+    text-shadow: 1px 1px 1px var(--nav-hover-link-color);
+}
+
+#nav-links a {
+    text-transform: uppercase;
+}
+
+#menu::before {
+    content: "☰";
+    font-size: 3rem;
+}
+
+#menu.open::before {
+    content: "×";
+    font-size: 4rem;
+}
+
+#nav-links {
+    display: none;
+}
+
+#nav-links.open {
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: black;
+}
+
+#nav-links.open a {
+    width: 100%;
+    text-align: center;
+    padding: .5rem 0;
+}
+
+#nav-links a.active {
+    text-decoration: underline;
+    text-underline-offset: .25rem;
+}
+
+a:hover:not(#menu:hover) {
+    color: var(--nav-hover-link-color);
+    text-shadow: 1px 1px 1px var(--nav-hover-background-color);
+}
+
+#nav-links.open a:hover {
+    color: black;
+    text-shadow: 1px 1px 1px var(--nav-hover-link-color);
+    background-color: var(--nav-hover-background-color);
+}
+
+main {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+}
+
+.hero {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+
+    display: grid;
+    grid-template: 1fr / 1fr;
+}
+
+.hero picture,
+.hero #bg,
+.hero #content {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.hero picture {
+    z-index: -1;
+}
+
+.hero picture,
+.hero picture img {
+    width: 100vw;
+    height: auto;
+}
+
+.hero #bg {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(-180deg, #000e, transparent);
+    z-index: -1;
+}
+
+.hero #content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: .5rem;
+}
+
+.hero #content>* {
+    text-align: center;
+}
+
+.hero #content h2 {
+    color: var(--headline-color-on-color);
+    text-shadow: 2px 2px 3px var(--headline-color-on-white);
+    width: 15ch;
+    font-size: 3.5ch;
+}
+
+.hero #content .book {
+    color: var(--nav-link-color);
+    text-shadow: 1px 1px 1px black;
+    background-color: var(--accent3-color);
+    text-decoration: none;
+    padding: .75rem;
+    border-radius: .25rem;
+    border: 1px solid white;
+    box-shadow: .5px .5px 2px lightgray;
+}
+
+.hero #content .book:hover {
+    color: var(--accent3-color);
+    background-color: var(--nav-hover-background-color);
+    text-shadow: 1px 1px 1px black;
+    border-color: black;
+}
+
+section {
+    grid-column: 2 / 3;
+}
+
+main section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    gap: 1rem;
+
+    padding: 1rem 0;
+}
+
+.carousel {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    overflow: hidden;
+    padding-inline: 1rem;
+    padding-bottom: 1rem;
+}
+
+.carousel article {
+    width: fit-content;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    gap: 1rem;
+    padding: 1rem 2rem;
+
+    border: 2px solid black;
+    border-radius: .5rem;
+    box-shadow: 3px 3px black;
+
+    background-color: var(--accent1-color);
+}
+
+.carousel h3 {
+    width: 15ch;
+    text-align: center;
+}
+
+.weather article {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 1rem;
+}
+
+.weather .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weather figure {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.weather .forecast figure {
+    flex-direction: column;
+}
+
+.weather h4 {
+    text-align: center;
+    width: 10ch;
+}
+
+footer {
+    grid-row: 4 / 5;
+    padding: .5rem 0 1rem;
+
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    row-gap: 1rem;
+}
+
+.info,
+.social,
+.project {
+    grid-column: 2 / 3;
+}
+
+.info figure,
+.social,
+.project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info figure {
+    flex-direction: row;
+}
+
+.info img {
+    width: calc(500px / 7);
+    object-fit: cover;
+}
+
+.info figcaption {
+    width: 20ch;
+}
+
+.info address {
+    font-style: normal;
+    flex-direction: column;
+    gap: .5rem
+}
+
+.info a {
+    display: block;
+}
+
+.social {
+    gap: 1.5rem;
+}
+
+.social a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.25rem;
+}
+
+.project {
+    flex-direction: column;
+}
