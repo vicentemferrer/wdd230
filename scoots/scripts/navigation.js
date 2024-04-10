@@ -8,7 +8,7 @@ function toggleNavLinks(navMode) {
     hamburgerMenu.classList.remove('open')
   }
 
-  if (navMode === 'open' && window.innerWidth < 1000) {
+  if (navMode === 'open' && window.innerWidth < 500) {
     document.querySelector('body').appendChild(navigation)
   } else {
     navElement.appendChild(navigation)

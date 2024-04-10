@@ -1,33 +1,25 @@
-import { toTitleCase, itemComponent, generateTextElement, generateImage, apiFetch } from './helpers.js'
+import { toTitleCase, apiFetch } from './helpers.js'
 
 const url = 'https://vicentemferrer.github.io/wdd230/scoots/data/rentals.json'
 
 const nameSetter = (type, brand, model, features) => `${brand} ${model}${type !== 'jeep' ? ` ${toTitleCase(type, type === 'atv')}` : ` - ${features?.doors} doors`}`
 
-const rentalCard = ({ type, brand, model, features, imageURL }) => {
+const rentalType = ({ type, brand, model, features }) => {
   const itemName = nameSetter(type, brand, model, features)
 
-  const article = document.createElement('article')
-  const img = generateImage(itemName, '../' + imageURL)
-  const h3 = generateTextElement('h3', itemName)
-  const detail = featuresSection(features)
+  const option = document.createElement('option')
 
-  article.appendChild(img)
-  article.appendChild(h3)
-  article.appendChild(detail)
+  option.textContent = itemName
 
-  article.classList.add('card')
+  option.setAttribute('value', `${brand}-${model.replace(' ', '-')}${'doors' in features ? `-${features['doors']}` : ''}`.toLowerCase())
 
-  return article
+  return option
 }
 
-function displayAgreements(rentals) {
-  const agreementsSection = document.querySelector('#agreements article')
-  const pricingSection = document.getElementById('pricing')
+function completeOptions(rentals) {
+  const select = document.querySelector('select')
 
-  rentals.forEach(rental => rentalsSection.appendChild(rentalCard(rental)))
-
-  pricingSection.appendChild(pricingTable(rentals))
+  rentals.forEach(rental => select.appendChild(rentalType(rental)))
 }
 
-apiFetch(url, displayAgreements)
+apiFetch(url, completeOptions)

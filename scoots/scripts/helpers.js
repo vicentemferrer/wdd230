@@ -7,6 +7,8 @@ const diffCalc = date => {
   return (Date.now() - date) / msToDays
 }
 
+const randInt = limit => Math.floor(Math.random() * limit)
+
 const itemComponent = (textItem, content, fn = () => { }, isFnNeeded = false) => {
   const paragraph = document.createElement('p')
 
@@ -62,4 +64,4 @@ async function apiFetch(url, fn) {
   }
 }
 
-export { toTitleCase, urlBuilder, diffCalc, divGenerator, itemComponent, generateTextElement, generateImage, apiFetch }
+export { toTitleCase, urlBuilder, diffCalc, divGenerator, itemComponent, randInt, generateTextElement, generateImage, apiFetch }

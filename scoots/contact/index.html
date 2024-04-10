@@ -26,7 +26,7 @@
     <header>
         <a href="../">
             <figure class="logo">
-                <img src="../images/logo.webp" alt="Scoots logo" loading="lazy">
+                <img src="../images/logo.webp" alt="Scoots logo" width="150" height="150" loading="lazy">
             </figure>
         </a>
         <nav class="kufam">
@@ -40,12 +40,49 @@
         </nav>
     </header>
     <main>
+        <section class="form">
+            <form action="../thankyou.html" method="post">
+                <h2 class="headline-in-white">Get Specialized Support</h2>
 
+                <label class="top">Name*
+                    <input type="text" id="name" name="name" required>
+                </label>
+
+                <label class="top">Email*
+                    <input type="email" id="email" name="email" required>
+                </label>
+
+                <label class="top">Message:
+                    <textarea id="accommodations" name="accommodations"
+                        placeholder="Include any drop-off requests or other needs here."></textarea>
+                </label>
+
+                <input type="submit" value="Get Support" class="kufam submitBtn">
+            </form>
+        </section>
+        <section>
+            <article class="card stores">
+                <h3>Visit our stores</h3>
+                <div>
+                    <h4>Store 1</h4>
+                    <p>Calle 2 Nte 26, Centro, 77600 Cozumel, Q.R., México</p>
+                </div>
+                <div>
+                    <h4>Store 2</h4>
+                    <p>Muelle Puerta Maya, 77675 Cozumel, Q.R., México</p>
+                </div>
+            </article>
+            <div class="maps">
+                <iframe
+                    src="https://www.google.com/maps/d/embed?mid=1wejcsdLI6mWI6kNFghit-qGFRe7S-fg&ehbc=2E312F&noprof=1"
+                    loading="lazy"></iframe>
+            </div>
+        </section>
     </main>
     <footer>
         <section class="info">
             <figure>
-                <img src="../images/logo.webp" alt="Scoots logo" loading="lazy">
+                <img src="../images/logo.webp" alt="Scoots logo" width="150" height="150" loading="lazy">
                 <figcaption>
                     <address>
                         <a href="mailto:contact@scoots.mx">contact@scoots.mx</a>
@@ -68,15 +105,9 @@
     </footer>
 
     <script type="module" src="../scripts/navigation.js"></script>
+    <script type="module" src="../scripts/redirect.js"></script>
     <script type="module" src="../scripts/getdates.js"></script>
     <script src="https://kit.fontawesome.com/466a0b8fee.js" crossorigin="anonymous" type="module"></script>
 </body>
 
 </html>
-<!-- 
-    - essential contact information,
-
-    - an embedded Google map showing the two locations on Cozumel, and
-
-    - a basic contact us form with name, email, and comment.
- -->

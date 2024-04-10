@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scoots | Rentals</title>
+    <title>Scoots | Thank You</title>
     <meta name="description" content="WDD 230 - Web Frontend Development, Vicente Ferrer, Scoots Final Project">
     <meta name="author" content="Vicente Ferrer">
 
-    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../../styles/normalize.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/normalize.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,37 +17,36 @@
         href="https://fonts.googleapis.com/css2?family=Arizonia&family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=Kufam:ital,wght@0,400..900;1,400..900&family=Syne+Mono&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="../styles/base.css" media="all">
-    <link rel="stylesheet" href="../styles/medium.css" media="(min-width: 500px)">
-    <link rel="stylesheet" href="../styles/large.css" media="(min-width: 1024px)">
+    <link rel="stylesheet" href="styles/base.css" media="all">
+    <link rel="stylesheet" href="styles/medium.css" media="(min-width: 500px)">
+    <link rel="stylesheet" href="styles/large.css" media="(min-width: 1024px)">
 </head>
 
 <body class="syne-mono alt uni-grid">
     <header>
-        <a href="../">
+        <a href="index.html">
             <figure class="logo">
-                <img src="../images/logo.webp" alt="Scoots logo" width="150" height="150" loading="lazy">
+                <img src="images/logo.webp" alt="Scoots logo" width="150" height="150" loading="lazy">
             </figure>
         </a>
         <nav class="kufam">
             <a href="#" id="menu"></a>
             <div class="kufam" id="nav-links">
-                <a href="../">Home</a>
-                <a href="index.html" class="active">Rentals</a>
-                <a href="../reservations/">Reservations</a>
-                <a href="../contact/">Contact</a>
+                <a href="index.html">Home</a>
+                <a href="rentals/">Rentals</a>
+                <a href="reservations/">Reservations</a>
+                <a href="contact/">Contact</a>
             </div>
         </nav>
     </header>
     <main>
-        <h2 class="headline-in-white">Rentals & Pricing</h2>
-        <section id="pricing"></section>
-        <section id="rentals"></section>
+        <section class="card" id="thanks">
+        </section>
     </main>
     <footer>
         <section class="info">
             <figure>
-                <img src="../images/logo.webp" alt="Scoots logo" width="150" height="150" loading="lazy">
+                <img src="images/logo.webp" alt="Scoots logo" width="150" height="150" loading="lazy">
                 <figcaption>
                     <address>
                         <a href="mailto:contact@scoots.mx">contact@scoots.mx</a>
@@ -69,9 +68,9 @@
         </section>
     </footer>
 
-    <script type="module" src="../scripts/navigation.js"></script>
-    <script type="module" src="../scripts/rentals.js"></script>
-    <script type="module" src="../scripts/getdates.js"></script>
+    <script type="module" src="scripts/navigation.js"></script>
+    <script type="module" src="scripts/thankyou.js"></script>
+    <script type="module" src="scripts/getdates.js"></script>
     <script src="https://kit.fontawesome.com/466a0b8fee.js" crossorigin="anonymous" type="module"></script>
 </body>
 

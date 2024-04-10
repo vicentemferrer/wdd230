@@ -1,4 +1,5 @@
 import { toTitleCase, urlBuilder, diffCalc, divGenerator, itemComponent, apiFetch, generateTextElement, generateImage } from './helpers.js'
+import { bannerComponent } from './banner.js'
 
 const currentWeatherURL = `https://api.openweathermap.org/data/2.5/weather`
 const forecastURL = `https://api.openweathermap.org/data/2.5/forecast`
@@ -54,7 +55,7 @@ const forecastItemComponent = ({ main: { temp }, weather: [{ description, icon }
   return figure
 }
 
-function displayCurrent({ main: { temp, humidity }, weather: [firstEvent, ..._] }) {
+function displayCurrent({ main: { temp, temp_max, humidity }, weather: [firstEvent, ..._] }) {
   const weatherInfo = document.querySelector('.weather article')
   const container = divGenerator('container')
 
@@ -63,6 +64,8 @@ function displayCurrent({ main: { temp, humidity }, weather: [firstEvent, ..._] 
   container.appendChild(generateTextElement('p', toTitleCase(firstEvent.description)))
 
   weatherInfo.appendChild(container)
+
+  document.body.appendChild(bannerComponent(temp_max))
 }
 
 function displayForecast({ list }) {
@@ -76,3 +79,6 @@ function displayForecast({ list }) {
 
 apiFetch(urlBuilder(currentWeatherURL, options), displayCurrent)
 apiFetch(urlBuilder(forecastURL, options), displayForecast)
+
+console.log(urlBuilder(currentWeatherURL, options))
+console.log(urlBuilder(forecastURL, options))

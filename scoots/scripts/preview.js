@@ -1,6 +1,16 @@
-import { generateTextElement, generateImage, apiFetch } from './helpers.js'
+import { randInt, generateTextElement, generateImage, apiFetch } from './helpers.js'
 
 const url = 'https://vicentemferrer.github.io/wdd230/scoots/data/rentals.json'
+
+const filterPreviews = previews => {
+  const shallow = [...previews]
+
+  while (shallow.length > 3) {
+    shallow.splice(randInt(shallow.length), 1)
+  }
+
+  return shallow
+}
 
 const previewCard = ({ type, brand, model, features, maxPersons, imageURL }) => {
   const itemName = `${brand} ${model}${type === 'scooter' ? ` (${features?.cc}cc)` : type === 'jeep' ? ` (${features?.doors} doors)` : ''}`
@@ -22,7 +32,7 @@ const previewCard = ({ type, brand, model, features, maxPersons, imageURL }) => 
 function displayPreview(rentals) {
   const carousel = document.querySelector('.carousel')
 
-  rentals.forEach(rental => carousel.appendChild(previewCard(rental)))
+  filterPreviews(rentals).forEach(rental => carousel.appendChild(previewCard(rental)))
 }
 
 apiFetch(url, displayPreview)

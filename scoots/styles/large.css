@@ -19,6 +19,11 @@
         font-size: 3ch;
     }
 
+    .maps {
+        width: 32rem;
+        padding: 0;
+    }
+
     main h2 {
         font-size: 4ch;
     }
